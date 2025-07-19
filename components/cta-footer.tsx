@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Play } from "lucide-react"
+import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export default function CTAFooter() {
   return (
@@ -13,11 +14,12 @@ export default function CTAFooter() {
           time.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="demo-btn px-8 py-4 text-lg font-semibold rounded-xl">
-            Get Early Access
-            <ArrowRight className="arrow w-5 h-5" />
-          </Button>
-          
+          <Link href="/early-access">
+            <Button size="lg" className="demo-btn px-8 py-4 text-lg font-semibold rounded-xl">
+              Get Early Access
+              <ArrowRight className="arrow w-5 h-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

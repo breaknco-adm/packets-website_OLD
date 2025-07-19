@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Check, ArrowRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Hero() {
   return (
@@ -14,7 +15,8 @@ export default function Hero() {
             </h1>
 
             <p className="font-body text-xl text-gray-600 mb-8 leading-relaxed">
-              {"Packets uses AI to guide you through every step of documentation with built-in workflows, smart form assistance, and real-time validation that catches errors before they happen."} 
+              Packets uses AI to guide you through every step of documentation with built-in workflows, smart form
+              assistance, and real-time validation that catches errors before they happen.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-10">
@@ -32,10 +34,12 @@ export default function Hero() {
               </div>
             </div>
 
-            <Button size="lg" className="demo-btn px-8 py-4 text-lg font-semibold rounded-xl">
-              Get Early Access
-              <ArrowRight className="arrow w-5 h-5" />
-            </Button>
+            <Link href="/early-access">
+              <Button size="lg" className="demo-btn px-8 py-4 text-lg font-semibold rounded-xl">
+                Get Early Access
+                <ArrowRight className="arrow w-5 h-5" />
+              </Button>
+            </Link>
           </div>
 
           {/* Right side - Image placeholder */}

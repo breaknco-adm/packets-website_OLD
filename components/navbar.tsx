@@ -98,10 +98,12 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <Button className="demo-btn px-6 py-2 font-medium rounded-xl shadow">
-            Get Early Access
-            <ArrowRight className="arrow w-4 h-4" />
-          </Button>
+          <Link href="/early-access">
+            <Button className="demo-btn px-6 py-2 font-medium rounded-xl shadow">
+              Get Early Access
+              <ArrowRight className="arrow w-4 h-4" />
+            </Button>
+          </Link>
         </div>
       </div>
     </nav>
