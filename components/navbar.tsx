@@ -10,12 +10,12 @@ const useCases = [
   {
     icon: Truck,
     title: "Travel & Logistics",
-    description: "Streamline travel approvals and logistics workflows",
+    description: "Streamline visa applications and permits workflows",
   },
   {
     icon: Users,
     title: "HR Operations",
-    description: "Automate onboarding, leave requests, and HR processes",
+    description: "Automate document workflows for employee onboarding" ,
   },
   {
     icon: GraduationCap,
@@ -25,7 +25,7 @@ const useCases = [
   {
     icon: DollarSign,
     title: "Finance",
-    description: "Automate expense approvals and financial processes",
+    description: "Loan application and audit workflows",
   },
   {
     icon: ShoppingCart,
@@ -90,19 +90,28 @@ export default function Navbar() {
             <Link href="/pricing" className="font-body text-gray-600 hover:text-gray-900 font-medium">
               Pricing
             </Link>
-            <Link href="/#faqs" className="font-body text-gray-600 hover:text-gray-900 font-medium">
-              FAQs
-            </Link>
             <Link href="/contact" className="font-body text-gray-600 hover:text-gray-900 font-medium">
               Contact Us
             </Link>
           </div>
 
           <Link href="/early-access">
-            <Button className="demo-btn px-6 py-2 font-medium rounded-xl shadow">
+            {/* <Button className="demo-btn px-6 py-2 font-medium rounded-xl shadow">
               Get Early Access
               <ArrowRight className="arrow w-4 h-4" />
-            </Button>
+            </Button> */}
+            <Button size="lg" className="relative px-6 py-3 font-semibold text-white bg-black rounded-xl overflow-hidden group" >
+                <span className="relative z-10 flex items-center gap-2">
+                  Get Early Access
+                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-2">
+                    <ArrowRight className="w-5 h-5" />
+                  </span>
+                </span>
+                {/* Animated shimmer border */}
+                <span className="absolute inset-0 rounded-xl border border-transparent group-hover:border-white/20">
+                  <span className="absolute -inset-[1px] rounded-xl bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-60 blur-sm animate-border-glow" />
+                </span>
+              </Button>
           </Link>
         </div>
       </div>

@@ -39,10 +39,10 @@ const features = [
 
 export default function Benefits() {
   return (
-    <section className="py-20 gradient-bg-alt bg-slate-500 text-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-slate-600 rounded-lg">
+    <section className="py-20 bg-white-600 rounded-lg shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center space-x-2 mb-4 rounded-3xl">
+          <div className="flex items-center justify-center space-x-2 mb-4">
             <Zap className="w-6 h-6 text-primary-600" />
             <h2 className="font-body text-3xl md:text-4xl font-bold text-gray-900">
               Build Intelligent Workflows in Minutes
@@ -66,19 +66,7 @@ export default function Benefits() {
               </Button>
             </div>
           ))}
-        </div>
-
-        <div className="mt-12 bg-white/70 backdrop-blur-sm rounded-xl p-6">
-          <div className="flex items-center space-x-3 mb-3">
-            <ClipboardCheck className="w-6 h-6 text-primary-600" />
-            <h3 className="font-body text-xl font-semibold text-gray-900">Final Review Tool</h3>
-          </div>
-          <p className="font-body text-gray-600 leading-relaxed mb-4">
-            Comprehensive review system that ensures accuracy and completeness before final submission, giving you
-            confidence in every document.
-          </p>
-          <Button className="neon-btn px-6 py-2 rounded-lg font-medium">Explore Feature</Button>
-        </div>
+        </div>        
       </div>
     </section>
   )

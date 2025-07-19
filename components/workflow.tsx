@@ -44,14 +44,11 @@ export default function Workflow() {
   return (
     <section className="py-20 gradient-bg-green">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Everything you need to scale documentation
+        <div className="text-center mb-2">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+            Done Right — Start to Finish
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive AI-powered tools designed for modern documentation workflows
-          </p>
-          <p className="text-lg text-gray-500 mt-4">
             Here's what a typical document workflow looks like—from assignment to completion.
           </p>
         </div>

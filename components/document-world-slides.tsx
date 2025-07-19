@@ -118,7 +118,7 @@ export default function DocumentWorldSlides() {
           <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20 min-h-[500px] transition-all duration-500">
             <div className="flex flex-col lg:flex-row items-start gap-12">
               {/* Left side - Content */}
-              <div className="flex-1">
+              <div className="flex-1 ml-0 lg:ml-12 space-y-6">
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="text-4xl">{currentSlideData.emoji}</div>
                   <div>
@@ -144,11 +144,6 @@ export default function DocumentWorldSlides() {
                     </div>
                   ))}
                 </div>
-
-                <Button className="demo-btn px-6 py-3 rounded-xl">
-                  Get Started
-                  <currentSlideData.icon className="w-4 h-4 ml-2" />
-                </Button>
               </div>
 
               {/* Right side - Visual Element */}
@@ -216,15 +211,6 @@ export default function DocumentWorldSlides() {
           </div>
         </div>
 
-        {/* Auto-play indicator */}
-        <div className="text-center mt-4">
-          <button
-            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-            className="text-gray-400 hover:text-white text-sm transition-colors"
-          >
-            {isAutoPlaying ? "⏸️ Pause" : "▶️ Play"} auto-rotation
-          </button>
-        </div>
       </div>
     </section>
   )
