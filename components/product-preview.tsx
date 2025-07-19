@@ -4,31 +4,41 @@ import { Button } from "@/components/ui/button"
 const features = [
   {
     number: "1",
-    title: "Build workflows visually",
+    title: "🛠️ Build Workflows Visually",
     description:
-      "No code needed. Drag and drop steps to automate document creation, approval, stamping, delivery, and notifications.",
-    image: "/placeholder.svg?height=300&width=500",
+      "No code needed. Use drag-and-drop tools to stitch together smart templates and automate every document process.",
+    details: [
+      "Start with ready-made templates like Passport Upload, Bank Statement Collection, or Application Forms",
+      "Customize each step — form inputs, validations, uploads, and approvals",
+      "Add logic for who fills what, when (e.g. user vs reviewer vs approver)",
+      "Automate actions like e-stamping, email delivery, and Slack alerts",
+      "Reuse and adapt workflows across teams, clients, or regions",
+    ],
+    image: "/placeholder.svg?height=300&width=500&text=Workflow+Builder+Interface",
   },
   {
     number: "2",
     title: "Chat with your documents",
     description:
       "Your built-in AI chatbot helps users fill forms, understand requirements, and fix issues—right inside the workflow.",
-    image: "/placeholder.svg?height=300&width=500",
+    details: [],
+    image: "/placeholder.svg?height=300&width=500&text=AI+Chat+Interface",
   },
   {
     number: "3",
     title: "Stay on top of everything",
     description:
       "Track the status of every document in real-time. See who's holding things up, what's approved, and what failed.",
-    image: "/placeholder.svg?height=300&width=500",
+    details: [],
+    image: "/placeholder.svg?height=300&width=500&text=Dashboard+Timeline+View",
   },
   {
     number: "4",
     title: "AI-assisted forms",
     description:
       "Forms that fill themselves. Packets suggests inputs, explains complex fields, and catches mistakes before submission.",
-    image: "/placeholder.svg?height=300&width=500",
+    details: [],
+    image: "/placeholder.svg?height=300&width=500&text=Smart+Form+Interface",
   },
 ]
 
@@ -50,6 +60,20 @@ export default function ProductPreview() {
                   <h3 className="font-display text-2xl md:text-3xl font-bold text-gray-900">{feature.title}</h3>
                 </div>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">{feature.description}</p>
+
+                {feature.details.length > 0 && (
+                  <div className="mb-6">
+                    <ul className="space-y-3">
+                      {feature.details.map((detail, detailIndex) => (
+                        <li key={detailIndex} className="flex items-start space-x-3">
+                          <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600 leading-relaxed">{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 <Button className="futuristic-btn text-white px-6 py-3 rounded-lg font-medium">Try This Feature</Button>
               </div>
               <div className="flex-1">

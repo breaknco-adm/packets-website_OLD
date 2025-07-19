@@ -39,10 +39,10 @@ const features = [
 
 export default function Benefits() {
   return (
-    <section className="py-20 gradient-bg-alt">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 gradient-bg-alt bg-slate-500 text-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-slate-600 rounded-lg">
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center space-x-2 mb-4">
+          <div className="flex items-center justify-center space-x-2 mb-4 rounded-3xl">
             <Zap className="w-6 h-6 text-primary-600" />
             <h2 className="font-body text-3xl md:text-4xl font-bold text-gray-900">
               Build Intelligent Workflows in Minutes

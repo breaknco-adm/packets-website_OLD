@@ -40,7 +40,7 @@ export default function WhatToExpect() {
           {expectations.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow"
+              className="rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow bg-sky-100"
             >
               <div className={`w-16 h-16 ${item.color} rounded-full flex items-center justify-center mx-auto mb-6`}>
                 <item.icon className="w-8 h-8" />

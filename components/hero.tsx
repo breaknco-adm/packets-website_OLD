@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="pt-24 pb-16 gradient-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="flex flex-col lg:flex-row items-center gap-y-0 px-px mx-[0] my-5">
           {/* Left side - Text content */}
           <div className="flex-1 text-left">
             <h1 className="font-body text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
