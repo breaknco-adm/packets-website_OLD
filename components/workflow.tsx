@@ -46,7 +46,7 @@ export default function Workflow() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-2">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-            Done Right — Start to Finish
+            Docs Done Right — Start to Finish
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Here's what a typical document workflow looks like—from assignment to completion.
@@ -71,9 +71,6 @@ export default function Workflow() {
                   <CheckCircle className="w-4 h-4 text-green-500" />
                   <span className="text-gray-700 font-medium">{step.benefit}</span>
                 </div>
-                <Button className="pulse-btn bg-green-600 hover:bg-green-700 text-white text-sm px-4 py-2 rounded-lg w-full">
-                  Start Step {index + 1}
-                </Button>
               </div>
             </div>
           ))}

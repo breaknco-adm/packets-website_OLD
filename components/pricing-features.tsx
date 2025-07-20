@@ -27,11 +27,6 @@ const features = [
     description: "Advanced user management, role-based permissions, and team collaboration",
   },
   {
-    icon: Globe,
-    title: "Multi-Region Support",
-    description: "Global deployment options with data residency compliance",
-  },
-  {
     icon: Lock,
     title: "Data Privacy",
     description: "GDPR, CCPA compliance with advanced data protection and encryption",

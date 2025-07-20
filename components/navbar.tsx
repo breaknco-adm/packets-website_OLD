@@ -15,7 +15,7 @@ const useCases = [
   {
     icon: Users,
     title: "HR Operations",
-    description: "Automate document workflows for employee onboarding" ,
+    description: "Automate document workflows for employee onboarding",
   },
   {
     icon: GraduationCap,
@@ -36,6 +36,36 @@ const useCases = [
 
 export default function Navbar() {
   const [isUseCasesOpen, setIsUseCasesOpen] = useState(false)
+  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null)
+
+  const handleMouseEnter = () => {
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout)
+      setHoverTimeout(null)
+    }
+    setIsUseCasesOpen(true)
+  }
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setIsUseCasesOpen(false)
+    }, 300) // 300ms delay before closing
+    setHoverTimeout(timeout)
+  }
+
+  const handleDropdownMouseEnter = () => {
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout)
+      setHoverTimeout(null)
+    }
+  }
+
+  const handleDropdownMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setIsUseCasesOpen(false)
+    }, 300)
+    setHoverTimeout(timeout)
+  }
 
   return (
     <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
@@ -54,24 +84,27 @@ export default function Navbar() {
             </Link>
 
             {/* Use Cases Dropdown - Horizontal Layout */}
-            <div
-              className="relative"
-              onMouseEnter={() => setIsUseCasesOpen(true)}
-              onMouseLeave={() => setIsUseCasesOpen(false)}
-            >
+            <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
               <button className="flex items-center space-x-1 font-body text-gray-600 hover:text-gray-900 font-medium">
                 <span>Use Cases</span>
-                <ChevronDown className="w-4 h-4" />
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-200 ${isUseCasesOpen ? "rotate-180" : ""}`}
+                />
               </button>
 
               {isUseCasesOpen && (
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[800px] bg-white rounded-xl shadow-2xl border border-gray-100 p-6">
+                <div
+                  className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[800px] bg-white rounded-xl shadow-2xl border border-gray-100 p-6 z-50"
+                  onMouseEnter={handleDropdownMouseEnter}
+                  onMouseLeave={handleDropdownMouseLeave}
+                >
                   <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
                     {useCases.map((useCase, index) => (
                       <Link
                         key={index}
                         href={`/#${useCase.title.toLowerCase().replace(/\s+/g, "-")}`}
                         className="flex flex-col items-center text-center p-4 rounded-lg hover:bg-gray-50 transition-colors group"
+                        onClick={() => setIsUseCasesOpen(false)}
                       >
                         <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center group-hover:bg-primary-200 transition-colors mb-3">
                           <useCase.icon className="w-6 h-6 text-primary-600" />
@@ -96,22 +129,21 @@ export default function Navbar() {
           </div>
 
           <Link href="/early-access">
-            {/* <Button className="demo-btn px-6 py-2 font-medium rounded-xl shadow">
-              Get Early Access
-              <ArrowRight className="arrow w-4 h-4" />
-            </Button> */}
-            <Button size="lg" className="relative px-6 py-3 font-semibold text-white bg-black rounded-xl overflow-hidden group" >
-                <span className="relative z-10 flex items-center gap-2">
-                  Get Early Access
-                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-2">
-                    <ArrowRight className="w-5 h-5" />
-                  </span>
+            <Button
+              size="lg"
+              className="relative px-6 py-3 font-semibold text-white bg-black rounded-xl overflow-hidden group"
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                Get Early Access
+                <span className="inline-block transition-transform duration-300 group-hover:translate-x-2">
+                  <ArrowRight className="w-5 h-5" />
                 </span>
-                {/* Animated shimmer border */}
-                <span className="absolute inset-0 rounded-xl border border-transparent group-hover:border-white/20">
-                  <span className="absolute -inset-[1px] rounded-xl bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-60 blur-sm animate-border-glow" />
-                </span>
-              </Button>
+              </span>
+              {/* Animated shimmer border */}
+              <span className="absolute inset-0 rounded-xl border border-transparent group-hover:border-white/20">
+                <span className="absolute -inset-[1px] rounded-xl bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-60 blur-sm animate-border-glow" />
+              </span>
+            </Button>
           </Link>
         </div>
       </div>

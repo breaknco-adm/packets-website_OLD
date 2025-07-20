@@ -61,9 +61,7 @@ export default function Benefits() {
               </div>
               <h3 className="font-body text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
               <p className="font-body text-gray-600 leading-relaxed mb-4">{feature.description}</p>
-              <Button className="pulse-btn bg-primary-600 hover:bg-primary-700 text-white text-sm px-4 py-2 rounded-lg">
-                Learn More
-              </Button>
+            
             </div>
           ))}
         </div>        
