@@ -79,16 +79,16 @@ export default function ProductPreview() {
               <div className="flex-1">
                 <div className="flex items-center space-x-3 mb-4 ">
   
-                  <h3 className="font-display text-2xl md:text-3xl font-bold text-gray-900">{feature.title}</h3>
+                  <h3 className="font-display text-2xl md:text-3xl font-bold text-black">{feature.title}</h3>
                 </div>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">{feature.description}</p>
+                <p className="text-lg text-gray-800 leading-relaxed mb-6">{feature.description}</p>
 
                 {feature.details.length > 0 && (
                   <div className="mb-6">
                     <ul className="space-y-3">
                       {feature.details.map((detail, detailIndex) => (
                         <li key={detailIndex} className="flex items-start space-x-3">
-                          <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
+                          <CheckCircle className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
                           <span className="text-gray-600 leading-relaxed">{detail}</span>
                         </li>
                       ))}
