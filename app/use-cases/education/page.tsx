@@ -199,10 +199,10 @@ export default function EducationPage() {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 mb-8 border border-blue-200">
               <GraduationCap className="w-5 h-5 text-blue-600" />
-              <span className="text-sm font-medium text-blue-700">Education Use Case</span>
+              <span className="text-sm font-medium text-blue-700">Education</span>
             </div>
 
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-8 animate-fade-in">
+            <h1 className="font-hero text-5xl md:text-6xl lg:text-7xl mb-8 animate-fade-in">
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
                 Automate student documentation
               </span>

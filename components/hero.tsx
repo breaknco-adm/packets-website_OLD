@@ -114,8 +114,8 @@ export default function Hero() {
           {/* Left side - Text content */}
           <div className="flex-1 text-center">
             <h1 className="font-hero text-5xl md:text-6xl text-gradient-hero mb-10 leading-tight tracking-tight">
-              Intelligent document workspace for{" "}
-              <span className="text-purple-300 font-black transition-all duration-500 ease-in-out bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+              Intelligent document workspace for <br />{" "}
+              <span className="text-purple-300 font-hero transition-all duration-500 ease-in-out bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
                 {rotatingItems[index]}
               </span>
             </h1>

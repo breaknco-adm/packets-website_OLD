@@ -191,17 +191,17 @@ export default function SalesProcurementPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
             <Badge className="mb-6 bg-blue-100 text-blue-800 hover:bg-blue-200 transition-colors">
-              🚀 Currently in Development
+              🚀 Sales Use Cases
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-8">
+            <h1 className="font-hero text-5xl md:text-6xl  mb-8">
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-gradient-x">
                 Sales & Procurement
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+            <p className="font-body text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
               Standardize, send, and track documents—faster than ever.
             </p>
-            <p className="text-lg text-gray-500 mb-12 max-w-3xl mx-auto">
+            <p className="font-body text-lg text-gray-500 mb-12 max-w-3xl mx-auto">
               Packets will help sales and procurement teams move deals forward without chasing PDFs or managing chaos in
               email threads.
             </p>

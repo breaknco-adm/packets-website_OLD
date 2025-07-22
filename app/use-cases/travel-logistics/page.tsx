@@ -143,12 +143,14 @@ export default function TravelLogisticsPage() {
               <Plane className="w-4 h-4 mr-2" />
               Travel & Logistics
             </Badge>
-            <h1 className="font-brand text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Automate Travel Documentation with Smart Forms & Checklists
+            <h1 className="font-hero text-5xl md:text-6xl  mb-8">
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-gradient-x">
+                Automate Travel Documentation with Smart Forms & Checklists
+              </span>
             </h1>
-            <p className="font-body text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Streamline visa applications, travel permits, and logistics documentation with auto form completion,
-              document verification, and intelligent validation. Reduce processing time by 85% while ensuring 100%
+
+            <p className="font-hero text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
+              Streamline visa applications, travel permits, and logistics documentation with auto form completion, document verification, and intelligent validation. Reduce processing time by 85% while ensuring 100%
               compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -322,8 +324,7 @@ export default function TravelLogisticsPage() {
                   <div>
                     <h4 className="font-body font-semibold text-gray-900 mb-2">Results</h4>
                     <p className="font-body text-gray-600 text-sm">
-                      Reduced processing time to 3-5 days, eliminated 95% of manual errors, and saved $75K annually in
-                      administrative costs. Employee satisfaction increased significantly.
+                      Reduced processing time to 3-5 days, eliminated 95% of manual errors, and saving administrative costs. Employee satisfaction increased significantly.
                     </p>
                   </div>
                 </div>

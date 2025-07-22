@@ -46,10 +46,6 @@ export default function EarlyAccessForm() {
     if (
       !formData.name ||
       !formData.email ||
-      !formData.phone ||
-      !formData.company ||
-      !formData.role ||
-      !formData.teamSize ||
       !formData.primaryTask
     ) {
       alert("Please fill in all required fields")
@@ -99,7 +95,6 @@ export default function EarlyAccessForm() {
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="name">Full Name *</Label>
               <Input
@@ -124,7 +119,7 @@ export default function EarlyAccessForm() {
                 required
               />
             </div>
-          </div>
+        
 
           <div className="space-y-2">
             <Label htmlFor="phone">Phone Number *</Label>
@@ -139,70 +134,25 @@ export default function EarlyAccessForm() {
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="company">Company *</Label>
-              <Input
-                id="company"
-                name="company"
-                type="text"
-                value={formData.company}
-                onChange={handleChange}
-                placeholder="Enter your company name"
-                required
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="role">Your Role *</Label>
-              <Select onValueChange={(value) => handleSelectChange("role", value)} required>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select your role" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="ceo">CEO/Founder</SelectItem>
-                  <SelectItem value="cto">CTO/Tech Lead</SelectItem>
-                  <SelectItem value="operations">Operations Manager</SelectItem>
-                  <SelectItem value="hr">HR Manager</SelectItem>
-                  <SelectItem value="finance">Finance Manager</SelectItem>
-                  <SelectItem value="admin">Admin/Office Manager</SelectItem>
-                  <SelectItem value="consultant">Consultant</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
 
           <div className="space-y-2">
-            <Label htmlFor="teamSize">Team Size *</Label>
-            <Select onValueChange={(value) => handleSelectChange("teamSize", value)} required>
-              <SelectTrigger>
-                <SelectValue placeholder="Select your team size" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="1-10">1-10 people</SelectItem>
-                <SelectItem value="11-50">11-50 people</SelectItem>
-                <SelectItem value="51-200">51-200 people</SelectItem>
-                <SelectItem value="201-1000">201-1000 people</SelectItem>
-                <SelectItem value="1000+">1000+ people</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="primaryTask">Primary Task You Want to Automate *</Label>
+            <Label htmlFor="primaryTask">What tasks would you like Packets to handle? *</Label>
             <Select onValueChange={(value) => handleSelectChange("primaryTask", value)} required>
               <SelectTrigger>
                 <SelectValue placeholder="Select your primary use case" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="hr-onboarding">HR - Employee onboarding</SelectItem>
-                <SelectItem value="hr-compliance">HR - Compliance documentation</SelectItem>
-                <SelectItem value="finance-reimbursements">Finance - Reimbursements</SelectItem>
-                <SelectItem value="finance-vendor">Finance - Vendor onboarding</SelectItem>
-                <SelectItem value="travel-logistics">Travel & Logistics</SelectItem>
-                <SelectItem value="sales-procurement">Sales & Procurement</SelectItem>
-                <SelectItem value="education-training">Education & Training</SelectItem>
-                <SelectItem value="legal-contracts">Legal - Contract management</SelectItem>
+                <SelectItem value="TL_CATEGORY_1">Preparing and submitting visa applications for international travel (Travel & Logistics)</SelectItem>
+                <SelectItem value="HR_CATEGORY_1">Automating document workflows for new employee onboarding (HR Operations)</SelectItem>
+                <SelectItem value="HR_CATEGORY_2">Managing compliance paperwork for HR and payroll (HR Operations)</SelectItem>
+                <SelectItem value="ED_CATEGORY_1">Assisting students with admission documentation workflows (Education)</SelectItem>
+                <SelectItem value="ED_CATEGORY_2">Automating onboarding paperwork for new students (Education)</SelectItem>
+                <SelectItem value="ED_CATEGORY_3">Managing compliance documentation for education regulations (Education)</SelectItem>
+                <SelectItem value="ED_CATEGORY_4">Study Abroad Visa Processing (Education)</SelectItem>
+                <SelectItem value="FI_CATEGORY_1">Preparing and organizing documents for audits (Finance)</SelectItem>
+                <SelectItem value="FI_CATEGORY_2">Gathering and validating tax-related forms (Finance)</SelectItem>
+                <SelectItem value="SP_CATEGORY_1">Creating and sending sales proposals with standardized templates (Sales & Procurement)</SelectItem>
+                <SelectItem value="SP_CATEGORY_2">Drafting and managing procurement contracts with vendors (Sales & Procurement)</SelectItem>
                 <SelectItem value="other">Other - Let me describe my use case...</SelectItem>
               </SelectContent>
             </Select>

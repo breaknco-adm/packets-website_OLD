@@ -16,20 +16,26 @@ import {
   ArrowRight,
 } from "lucide-react"
 import Link from "next/link"
+import Navbar from "@/components/navbar"
+import Footer from "@/components/footer"
 
 export default function FinancePage() {
   return (
     <div className="min-h-screen">
+    <Navbar/>
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/placeholder.svg?height=800&width=1200')] opacity-5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="mb-6 bg-emerald-100 text-emerald-800 border-emerald-200">Finance Operations</Badge>
-            <h1 className="font-hero text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Automate document-heavy finance workflows—
-              <span className="text-emerald-600">accurate, fast, audit-ready</span>
+            <h1 className="font-hero text-5xl md:text-6xl lg:text-7xl mb-8 animate-fade-in">
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                Automate document-heavy finance workflows—accurate, fast, audit-ready
+              </span>
             </h1>
+
+
             <p className="font-modern text-xl text-gray-600 mb-8 leading-relaxed">
               Packets (currently in development) helps finance teams run high-trust, low-touch workflows for
               reimbursements, audits, vendor onboarding, and tax documentation—without chasing forms or sending
@@ -306,6 +312,7 @@ export default function FinancePage() {
           </Link>
         </div>
       </section>
+      <Footer/>
     </div>
   )
 }
