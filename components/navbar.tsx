@@ -29,7 +29,7 @@ const useCases = [
     icon: DollarSign,
     title: "Finance",
     description: "Loan application and audit workflows",
-    href: "/#finance",
+    href: "/use-cases/finance",
   },
   {
     icon: ShoppingCart,

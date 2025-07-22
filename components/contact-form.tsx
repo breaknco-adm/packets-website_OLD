@@ -39,10 +39,10 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="py-20 gradient-bg-alt">
+    <section className="py-10 gradient-bg-alt">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-body text-3xl md:text-4xl font-bold text-gray-900 mb-4">Send Us a Message</h2>
+          <h2 className="font-body text-3xl md:text-4xl font-bold text-gray-900 mb-2">Send Us a Message</h2>
           <p className="font-body text-xl text-gray-600">
             Fill out the form below and we'll get back to you as soon as possible.
           </p>
