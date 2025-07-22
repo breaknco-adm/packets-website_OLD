@@ -120,7 +120,7 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="font-modern text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed font-medium max-w-4xl mx-auto">
+            <p className="font-body text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed font-medium max-w-4xl mx-auto">
               Packets uses AI to guide you through every step of documentation with built-in workflows, smart form
               assistance, and real-time validation that catches errors before they happen.
             </p>

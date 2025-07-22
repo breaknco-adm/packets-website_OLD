@@ -2,28 +2,29 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useTransition } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { CheckCircle } from "lucide-react"
+import { CheckCircle , AlertCircle} from "lucide-react"
+import { submitEarlyAccessForm } from "@/app/actions/early-access"
+import { motion } from "framer-motion"
+import { event } from "@/lib/gtag"
+import { getStoredUTMVisitId } from "@/lib/utm-tracking"
 
 export default function EarlyAccessForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    company: "",
-    role: "",
-    teamSize: "",
     primaryTask: "",
     customTaskDetails: "",
   })
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
+  const [isPending, startTransition] = useTransition()
+  const [result, setResult] = useState<{ success: boolean; message: string } | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -41,52 +42,24 @@ export default function EarlyAccessForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    startTransition(async () => {
+      const formDataObj = new FormData(e.target as HTMLFormElement)
 
-    // Basic validation
-    if (
-      !formData.name ||
-      !formData.email ||
-      !formData.primaryTask
-    ) {
-      alert("Please fill in all required fields")
-      return
-    }
+      // Add UTM visit ID if available
+      const utmVisitId = getStoredUTMVisitId()
+      if (utmVisitId) {
+        formDataObj.append("utmVisitId", utmVisitId)
+      }
 
-    // Validate custom task details if "Other" is selected
-    if (formData.primaryTask === "other" && !formData.customTaskDetails.trim()) {
-      alert("Please describe your custom use case")
-      return
-    }
-
-    setIsLoading(true)
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-
-    setIsLoading(false)
-    setIsSubmitted(true)
+      const response = await submitEarlyAccessForm(formDataObj)
+      setResult(response)
+    })
   }
 
-  if (isSubmitted) {
-    return (
-      <Card className="w-full max-w-2xl mx-auto">
-        <CardContent className="p-8 text-center">
-          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-6" />
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Thank you for your interest!</h3>
-          <p className="text-gray-600 mb-6">
-            We've received your request for early access to Packets. Our team will review your information and get back
-            to you soon.
-          </p>
-          <p className="text-sm text-gray-500">
-            We'll keep you updated on our development progress and notify you when early access becomes available.
-          </p>
-        </CardContent>
-      </Card>
-    )
-  }
+
 
   return (
-    <Card className="w-full max-w-2xl mx-auto">
+    <Card className="w-full max-w-2xl mx-auto mb-5">
       <CardHeader>
         <CardTitle className="text-2xl font-bold text-center">Get Early Access to Packets</CardTitle>
         <CardDescription className="text-center">
@@ -94,6 +67,28 @@ export default function EarlyAccessForm() {
         </CardDescription>
       </CardHeader>
       <CardContent>
+        {/* Status Messages */}
+        {result && result.success && (
+          <motion.div
+            className="flex items-center space-x-3 p-4 bg-green-200 border border-green-700 rounded-lg text-green-900 mb-6"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <CheckCircle className="h-5 w-5 flex-shrink-0" />
+            <span>{result.message}</span>
+          </motion.div>
+        )}
+
+        {result && !result.success && (
+          <motion.div
+            className="flex items-center space-x-3 p-4 bg-red-200 border border-red-700 rounded-lg text-red-900 mb-6"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <AlertCircle className="h-5 w-5 flex-shrink-0" />
+            <span>{result.message}</span>
+          </motion.div>
+        )}
         <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
               <Label htmlFor="name">Full Name *</Label>
@@ -137,7 +132,7 @@ export default function EarlyAccessForm() {
 
           <div className="space-y-2">
             <Label htmlFor="primaryTask">What tasks would you like Packets to handle? *</Label>
-            <Select onValueChange={(value) => handleSelectChange("primaryTask", value)} required>
+            <Select name = "primaryTask" onValueChange={(value) => handleSelectChange("primaryTask", value)} required>
               <SelectTrigger>
                 <SelectValue placeholder="Select your primary use case" />
               </SelectTrigger>
@@ -153,12 +148,12 @@ export default function EarlyAccessForm() {
                 <SelectItem value="FI_CATEGORY_2">Gathering and validating tax-related forms (Finance)</SelectItem>
                 <SelectItem value="SP_CATEGORY_1">Creating and sending sales proposals with standardized templates (Sales & Procurement)</SelectItem>
                 <SelectItem value="SP_CATEGORY_2">Drafting and managing procurement contracts with vendors (Sales & Procurement)</SelectItem>
-                <SelectItem value="other">Other - Let me describe my use case...</SelectItem>
+                <SelectItem value="OTHER">Other (Let me describe my use case...)</SelectItem>
               </SelectContent>
             </Select>
           </div>
 
-          {formData.primaryTask === "other" && (
+          {formData.primaryTask === "OTHER" && (
             <div className="space-y-2">
               <Label htmlFor="customTaskDetails">Describe Your Custom Use Case *</Label>
               <Textarea
@@ -174,8 +169,8 @@ export default function EarlyAccessForm() {
             </div>
           )}
 
-          <Button type="submit" className="w-full py-3 text-lg font-semibold" disabled={isLoading}>
-            {isLoading ? "Submitting..." : "Join the Waitlist"}
+          <Button type="submit" className="w-full py-3 text-lg font-semibold" disabled={isPending}>
+            {isPending ? "Submitting..." : "Join the Waitlist"}
           </Button>
         </form>
       </CardContent>

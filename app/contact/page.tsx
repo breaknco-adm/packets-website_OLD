@@ -70,7 +70,7 @@ export default function ContactPage() {
         <Navbar />
         <ContactHero />
         <ContactForm />
-        <ContactInfo />
+        {/* <ContactInfo /> */}
         <Footer />
       </main>
     </>

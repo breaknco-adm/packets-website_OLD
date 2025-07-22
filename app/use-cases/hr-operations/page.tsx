@@ -472,7 +472,6 @@ export default function HROperationsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-body text-3xl md:text-4xl font-bold text-white mb-6">Get early access</h2>
-            <p className="font-body text-xl text-gray-300 mb-2">Packets is currently in development.</p>
             <p className="font-body text-lg text-gray-400 mb-8">
               Want to be part of the first cohort to try HR automation with real AI built in?
             </p>

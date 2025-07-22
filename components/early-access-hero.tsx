@@ -2,7 +2,7 @@ import { Sparkles, Zap, Shield } from "lucide-react"
 
 export default function EarlyAccessHero() {
   return (
-    <section className="pt-24 pb-8 gradient-bg">
+    <section className="pt-24 pb-8 gradient-bg mb-5">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="flex justify-center mb-6">
           <div className="flex items-center space-x-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium">

@@ -56,7 +56,7 @@ export default function EarlyAccessPage() {
                 "@type": "Offer",
                 description: "Free early access with exclusive benefits and rewards",
                 price: "0",
-                priceCurrency: "USD",
+                priceCurrency: "INR",
               },
             },
           }),
