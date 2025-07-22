@@ -11,26 +11,31 @@ const useCases = [
     icon: Truck,
     title: "Travel & Logistics",
     description: "Streamline visa applications and permits workflows",
+    href: "/use-cases/travel-logistics",
   },
   {
     icon: Users,
     title: "HR Operations",
     description: "Automate document workflows for employee onboarding",
+    href: "/use-cases/hr-operations",
   },
   {
     icon: GraduationCap,
     title: "Education",
     description: "Manage student applications and academic workflows",
+    href: "/use-cases/education",
   },
   {
     icon: DollarSign,
     title: "Finance",
     description: "Loan application and audit workflows",
+    href: "/#finance",
   },
   {
     icon: ShoppingCart,
     title: "Sales & Procurement",
     description: "Streamline sales contracts and procurement workflows",
+    href: "/use-cases/sales-procurement",
   },
 ]
 
@@ -102,7 +107,7 @@ export default function Navbar() {
                     {useCases.map((useCase, index) => (
                       <Link
                         key={index}
-                        href={`/#${useCase.title.toLowerCase().replace(/\s+/g, "-")}`}
+                        href={useCase.href}
                         className="flex flex-col items-center text-center p-4 rounded-lg hover:bg-gray-50 transition-colors group"
                         onClick={() => setIsUseCasesOpen(false)}
                       >

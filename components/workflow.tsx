@@ -1,81 +1,241 @@
-import { Users, LogIn, Upload, Eye, Bot, CheckCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
+"use client"
+import React, { useState, useEffect } from 'react';
+import { UserPlus, LogIn, Upload, Eye, Bot, CheckCircle, ArrowRight, Zap } from 'lucide-react';
 
-const steps = [
-  {
-    icon: Users,
-    title: "Assign a Workflow",
-    description: "Admin selects a predefined flow (e.g. onboarding, KYC, travel request) and assigns it to the user.",
-    benefit: "Choose templates or build your own.",
-  },
-  {
-    icon: LogIn,
-    title: "User Logs In",
-    description: "User gets notified and opens the assigned packet.",
-    benefit: "Everything they need is in one place—forms, uploads, instructions.",
-  },
-  {
-    icon: Upload,
-    title: "Upload & Fill",
-    description: "User uploads documents, fills out forms, completes tasks one by one.",
-    benefit: "Files auto-validated in real time. No more back-and-forth.",
-  },
-  {
-    icon: Eye,
-    title: "Review & Remind",
-    description: "Admin tracks checklist progress, reviews uploads, and sends reminders if needed.",
-    benefit: "Full visibility, zero micromanagement.",
-  },
-  {
-    icon: Bot,
-    title: "Get AI Assistance",
-    description: "Packets' AI chatbot helps users fill forms, fix missing fields, and validate documents instantly.",
-    benefit: "No support tickets. Just answers.",
-  },
-  {
-    icon: CheckCircle,
-    title: "Complete the Checklist",
-    description: "Once all items are done, the packet is closed.",
-    benefit: "Audit trail is saved. Docs are archived. Everyone gets a copy.",
-  },
-]
+const WorkflowSection = () => {
+  const [activeStep, setActiveStep] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [completedSteps, setCompletedSteps] = useState<number[]>([]);
 
-export default function Workflow() {
+  const workflowSteps = [
+    {
+      icon: UserPlus,
+      title: "Workflow Assignment",
+      description: "Admin selects a predefined flow (e.g. onboarding, KYC, travel request) and assigns it to the user.",
+      color: "from-teal-400 to-teal-600",
+      glowColor: "shadow-teal-500/50",
+      details: "Choose templates or build your own."
+    },
+    {
+      icon: LogIn,
+      title: "User Login",
+      description: "SeUser gets notified and opens the assigned packet.",
+      color: "from-cyan-400 to-cyan-600",
+      glowColor: "shadow-cyan-500/50",
+      details: "Everything they need is in one place—forms, uploads, instructions."
+    },
+    {
+      icon: Upload,
+      title: "Form Upload & Completion",
+      description: "Smart forms with auto-completion and validation",
+      color: "from-blue-400 to-blue-600",
+      glowColor: "shadow-blue-500/50",
+      details: "AI assists with form filling and error detection"
+    },
+    {
+      icon: Eye,
+      title: "Review & Reminders",
+      description: "Admin tracks checklist progress, reviews uploads, and sends reminders if needed.",
+      color: "from-indigo-400 to-indigo-600",
+      glowColor: "shadow-indigo-500/50",
+      details: "Automated reminders based on behavioral patterns"
+    },
+    {
+      icon: Bot,
+      title: "AI Assistance",
+      description: "Packets' AI chatbot helps users fill forms, fix missing fields, and validate documents instantly.",
+      color: "from-purple-400 to-purple-600",
+      glowColor: "shadow-purple-500/50",
+      details: "Advanced AI provides contextual help and optimization"
+    },
+    {
+      icon: CheckCircle,
+      title: "Checklist Completion",
+      description: "Automated verification and once all items are done, the packet is closed.",
+      color: "from-emerald-400 to-emerald-600",
+      glowColor: "shadow-emerald-500/50",
+      details: "Audit trail is saved. Docs are archived. Everyone gets a copy."
+    }
+  ];
+
+  useEffect(() => {
+    if (isAutoPlaying) {
+      const interval = setInterval(() => {
+        setActiveStep((prev) => (prev + 1) % workflowSteps.length);
+      }, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [isAutoPlaying, workflowSteps.length]);
+
+  const handleStepClick = (index: number) => {
+    setActiveStep(index);
+    setIsAutoPlaying(false);
+    if (!completedSteps.includes(index)) {
+      setCompletedSteps([...completedSteps, index]);
+    }
+  };
+
+  const resetDemo = () => {
+    setActiveStep(0);
+    setCompletedSteps([]);
+    setIsAutoPlaying(true);
+  };
+
   return (
-    <section className="py-20 gradient-bg-green">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-2">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+    <section id="workflow" className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      </div>
+
+      {/* Grid Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="h-full w-full" style={{
+          backgroundImage: `
+            linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px)
+          `,
+          backgroundSize: '50px 50px'
+        }}></div>
+      </div>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-teal-500/20 to-blue-500/20 backdrop-blur-sm border border-teal-500/30 rounded-full px-6 py-2 mb-6">
+            <Zap className="h-4 w-4 text-teal-400" />
+            <span className="text-teal-400 font-medium">Next-Gen Automation</span>
+          </div>
+          
+          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-teal-200 to-blue-200 bg-clip-text text-transparent mb-6">
             Docs Done Right — Start to Finish
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          
+          <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
+            Experience the future of workflow automation with AI-powered intelligence. 
             Here's what a typical document workflow looks like—from assignment to completion.
           </p>
+
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {steps.map((step, index) => (
-            <div key={index} className="relative">
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 h-full hover:bg-white/90 transition-all">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                    <step.icon className="w-6 h-6 text-primary-600" />
-                  </div>
-                  <div>
-                    <span className="text-sm font-medium text-primary-600">Step {index + 1}</span>
-                    <h3 className="font-display text-lg font-semibold text-gray-900">{step.title}</h3>
+        {/* Interactive Workflow Steps */}
+        <div className="relative">
+          {/* Connection Lines */}
+          <div className="absolute left-8 top-16 bottom-16 w-0.5 bg-gradient-to-b from-teal-500 via-blue-500 to-purple-500 opacity-30"></div>
+          
+          <div className="space-y-8">
+            {workflowSteps.map((step, index) => {
+              const IconComponent = step.icon;
+              const isActive = activeStep === index;
+              const isCompleted = completedSteps.includes(index);
+              
+              return (
+                <div
+                  key={index}
+                  className={`group relative cursor-pointer transition-all duration-500 ${
+                    isActive ? 'scale-105' : 'hover:scale-102'
+                  }`}
+                  onClick={() => handleStepClick(index)}
+                >
+                  {/* Glow Effect */}
+                  {isActive && (
+                    <div className={`absolute inset-0 bg-gradient-to-r ${step.color} opacity-10 rounded-3xl blur-xl scale-110`}></div>
+                  )}
+                  
+                  <div className={`relative flex items-center space-x-8 p-8 rounded-3xl backdrop-blur-sm transition-all duration-500 ${
+                    isActive 
+                      ? 'bg-gradient-to-r from-gray-800/80 to-gray-700/80 border-2 border-teal-500/50 shadow-2xl' 
+                      : 'bg-gray-800/40 border border-gray-700/50 hover:bg-gray-800/60'
+                  }`}>
+                    
+                    {/* Step Number & Icon */}
+                    <div className="relative flex-shrink-0">
+                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${step.color} p-4 transition-all duration-500 ${
+                        isActive ? `shadow-2xl ${step.glowColor} animate-pulse` : 'shadow-lg'
+                      }`}>
+                        <IconComponent className="h-8 w-8 text-white" />
+                      </div>
+                      
+                      {/* Step Number */}
+                      <div className={`absolute -top-2 -right-2 w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center transition-all duration-300 ${
+                        isCompleted 
+                          ? 'bg-emerald-500 text-white' 
+                          : isActive 
+                            ? 'bg-white text-gray-900' 
+                            : 'bg-gray-600 text-gray-300'
+                      }`}>
+                        {isCompleted ? '✓' : index + 1}
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1 min-w-0">
+                      <h3 className={`text-2xl font-bold mb-2 transition-all duration-300 ${
+                        isActive ? 'text-white' : 'text-gray-200'
+                      }`}>
+                        {step.title}
+                      </h3>
+                      
+                      <p className={`text-lg mb-3 transition-all duration-300 ${
+                        isActive ? 'text-gray-200' : 'text-gray-400'
+                      }`}>
+                        {step.description}
+                      </p>
+                      
+                      {/* Expandable Details */}
+                      <div className={`overflow-hidden transition-all duration-500 ${
+                        isActive ? 'max-h-20 opacity-100' : 'max-h-0 opacity-0'
+                      }`}>
+                        <p className="text-teal-300 text-sm font-medium">
+                          {step.details}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Progress Indicator */}
+                    <div className="flex-shrink-0">
+                      {isActive && (
+                        <div className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-teal-400 rounded-full animate-ping"></div>
+                          <div className="w-2 h-2 bg-teal-400 rounded-full animate-ping delay-75"></div>
+                          <div className="w-2 h-2 bg-teal-400 rounded-full animate-ping delay-150"></div>
+                        </div>
+                      )}
+                      
+                      {!isActive && (
+                        <ArrowRight className={`h-6 w-6 transition-all duration-300 ${
+                          isCompleted ? 'text-emerald-400' : 'text-gray-500 group-hover:text-teal-400'
+                        }`} />
+                      )}
+                    </div>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-4 leading-relaxed">{step.description}</p>
-                <div className="flex items-center space-x-2 text-sm mb-4">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-gray-700 font-medium">{step.benefit}</span>
-                </div>
-              </div>
-            </div>
-          ))}
+              );
+            })}
+          </div>
         </div>
+
+        {/* Progress Bar */}
+        <div className="mt-16 max-w-2xl mx-auto">
+          <div className="flex justify-between items-center mb-4">
+            <span className="text-gray-400 font-medium">Workflow Progress</span>
+            <span className="text-teal-400 font-bold">
+              {Math.round(((activeStep + 1) / workflowSteps.length) * 100)}%
+            </span>
+          </div>
+          
+          <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+            <div 
+              className="h-full bg-gradient-to-r from-teal-500 to-blue-500 transition-all duration-1000 ease-out"
+              style={{ width: `${((activeStep + 1) / workflowSteps.length) * 100}%` }}
+            ></div>
+          </div>
+        </div>
+
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default WorkflowSection;

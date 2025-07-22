@@ -95,15 +95,24 @@ const config: Config = {
           },
         },
         borderGlow: {
-      '0%': { transform: 'translateX(-100%)' },
-      '50%': { transform: 'translateX(100%)' },
-      '100%': { transform: 'translateX(100%)' },
+          '0%': { transform: 'translateX(-100%)' },
+          '50%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+        pulseGlow: {
+      '0%, 100%': {
+        boxShadow: '0 0 0px rgba(99, 102, 241, 0.6)',
+      },
+      '50%': {
+        boxShadow: '0 0 12px rgba(99, 102, 241, 0.8)',
+      },
     },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         'border-glow': 'borderGlow 2s ease-in-out infinite',
+        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
       },
     },
   },

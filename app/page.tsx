@@ -72,8 +72,8 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Benefits />
-        <ProductPreview />
         <Workflow />
+        <ProductPreview /> 
         <DocumentWorldSlides />
         <CTAFooter />
         <Footer />

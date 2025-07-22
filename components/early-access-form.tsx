@@ -55,6 +55,11 @@ const taskOptions = [
     label: "Drafting and managing procurement contracts with vendors (Sales & Procurement)",
     category: "Sales & Procurement",
   },
+  {
+    value: "Other",
+    label: "Let me describe my use case....",
+    category: "Other",
+  },
 ]
 
 export default function EarlyAccessForm() {
@@ -112,9 +117,9 @@ export default function EarlyAccessForm() {
   }
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-4 bg-white">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-2xl shadow-xl border border-gray-100 p-8 bg-sidebar-border">
+        <div className="bg-sidebar-border rounded-2xl shadow-xl border border-gray-100 p-8">
           <h2 className="font-body text-2xl font-bold text-gray-900 mb-8 text-center">Join Early Access Program</h2>
 
           <form onSubmit={handleSubmit} className="space-y-6">
