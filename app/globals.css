@@ -13,6 +13,8 @@
 /* Helvetica Neue is a common system font, no download needed */
 :root {
   --font-inter: "Inter", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
   --font-restora: "Restora", serif;
   --font-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --background: 0 0% 100%;
@@ -107,6 +109,12 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+  .text-gradient-hero {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }
 
 @layer base {
@@ -124,6 +132,18 @@
 
   .font-body {
     font-family: var(--font-helvetica);
+  }
+
+  .font-hero {
+    font-family: var(--font-poppins);
+  }
+
+  .font-modern {
+    font-family: var(--font-montserrat);
+  }
+
+  .font-pro {
+    font-family: var(--font-poppins);
   }
 }
 

@@ -8,19 +8,8 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { CheckCircle, Loader2 } from "lucide-react"
-
-const taskOptions = [
-  "Travel visa applications and permits",
-  "Employee onboarding and HR documentation",
-  "Student applications and academic workflows",
-  "Audit preparation and compliance documentation",
-  "Tax form collection and validation",
-  "Vendor onboarding and procurement workflows",
-  "Reimbursement and expense management",
-  "Other - Let me describe my use case....",
-]
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { CheckCircle } from "lucide-react"
 
 export default function EarlyAccessForm() {
   const [formData, setFormData] = useState({
@@ -29,101 +18,108 @@ export default function EarlyAccessForm() {
     phone: "",
     company: "",
     role: "",
-    task: "",
+    teamSize: "",
+    primaryTask: "",
     customTaskDetails: "",
   })
-  const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+  }
+
+  const handleSelectChange = (name: string, value: string) => {
+    setFormData({
+      ...formData,
       [name]: value,
-      // Clear custom task details if user changes away from "Other"
-      ...(name === "task" && value !== "Other - Let me describe my use case...." ? { customTaskDetails: "" } : {}),
-    }))
+    })
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    // Validation
-    if (!formData.name || !formData.email || !formData.phone || !formData.company || !formData.role || !formData.task) {
+    // Basic validation
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.company ||
+      !formData.role ||
+      !formData.teamSize ||
+      !formData.primaryTask
+    ) {
       alert("Please fill in all required fields")
       return
     }
 
-    // Additional validation for custom task details when "Other" is selected
-    if (formData.task === "Other - Let me describe my use case...." && !formData.customTaskDetails.trim()) {
+    // Validate custom task details if "Other" is selected
+    if (formData.primaryTask === "other" && !formData.customTaskDetails.trim()) {
       alert("Please describe your custom use case")
       return
     }
 
-    setIsSubmitting(true)
+    setIsLoading(true)
 
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 2000))
 
-    setIsSubmitting(false)
+    setIsLoading(false)
     setIsSubmitted(true)
   }
 
   if (isSubmitted) {
     return (
-      <Card className="w-full max-w-2xl mx-auto backdrop-blur-sm bg-white/90 border-white/20 shadow-2xl">
+      <Card className="w-full max-w-2xl mx-auto">
         <CardContent className="p-8 text-center">
-          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle className="w-8 h-8 text-green-600" />
-          </div>
+          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-6" />
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Thank you for your interest!</h3>
           <p className="text-gray-600 mb-6">
-            We've received your request for early access. Our team will review your use case and get back to you soon
-            with next steps.
+            We've received your request for early access to Packets. Our team will review your information and get back
+            to you soon.
           </p>
-          <Badge className="bg-blue-100 text-blue-800 border-blue-200">You're on the waitlist! 🎉</Badge>
+          <p className="text-sm text-gray-500">
+            We'll keep you updated on our development progress and notify you when early access becomes available.
+          </p>
         </CardContent>
       </Card>
     )
   }
 
   return (
-    <Card className="w-full max-w-2xl mx-auto backdrop-blur-sm bg-white/90 border-white/20 shadow-2xl">
-      <CardHeader className="text-center pb-6">
-        <CardTitle className="text-2xl font-bold text-gray-900">Get Early Access</CardTitle>
-        <CardDescription className="text-gray-600">
-          Join the waitlist to be among the first to experience Packets when it launches.
+    <Card className="w-full max-w-2xl mx-auto">
+      <CardHeader>
+        <CardTitle className="text-2xl font-bold text-center">Get Early Access to Packets</CardTitle>
+        <CardDescription className="text-center">
+          Join the waitlist to be among the first to experience intelligent document workflows
         </CardDescription>
       </CardHeader>
-      <CardContent className="p-8 pt-0">
+      <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="name" className="text-sm font-medium text-gray-700">
-                Full Name *
-              </Label>
+              <Label htmlFor="name">Full Name *</Label>
               <Input
                 id="name"
                 name="name"
                 type="text"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full"
                 placeholder="Enter your full name"
                 required
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-sm font-medium text-gray-700">
-                Email Address *
-              </Label>
+              <Label htmlFor="email">Email Address *</Label>
               <Input
                 id="email"
                 name="email"
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full"
                 placeholder="Enter your email"
                 required
               />
@@ -131,107 +127,105 @@ export default function EarlyAccessForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="phone" className="text-sm font-medium text-gray-700">
-              Phone Number *
-            </Label>
+            <Label htmlFor="phone">Phone Number *</Label>
             <Input
               id="phone"
               name="phone"
               type="tel"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full"
               placeholder="Enter your phone number"
               required
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="company" className="text-sm font-medium text-gray-700">
-                Company *
-              </Label>
+              <Label htmlFor="company">Company *</Label>
               <Input
                 id="company"
                 name="company"
                 type="text"
                 value={formData.company}
                 onChange={handleChange}
-                className="w-full"
                 placeholder="Enter your company name"
                 required
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="role" className="text-sm font-medium text-gray-700">
-                Role *
-              </Label>
-              <Input
-                id="role"
-                name="role"
-                type="text"
-                value={formData.role}
-                onChange={handleChange}
-                className="w-full"
-                placeholder="Enter your job title"
-                required
-              />
+              <Label htmlFor="role">Your Role *</Label>
+              <Select onValueChange={(value) => handleSelectChange("role", value)} required>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select your role" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="ceo">CEO/Founder</SelectItem>
+                  <SelectItem value="cto">CTO/Tech Lead</SelectItem>
+                  <SelectItem value="operations">Operations Manager</SelectItem>
+                  <SelectItem value="hr">HR Manager</SelectItem>
+                  <SelectItem value="finance">Finance Manager</SelectItem>
+                  <SelectItem value="admin">Admin/Office Manager</SelectItem>
+                  <SelectItem value="consultant">Consultant</SelectItem>
+                  <SelectItem value="other">Other</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="task" className="text-sm font-medium text-gray-700">
-              Primary Task/Workflow *
-            </Label>
-            <select
-              id="task"
-              name="task"
-              value={formData.task}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              required
-            >
-              <option value="">Select your primary use case</option>
-              {taskOptions.map((option, index) => (
-                <option key={index} value={option}>
-                  {option}
-                </option>
-              ))}
-            </select>
+            <Label htmlFor="teamSize">Team Size *</Label>
+            <Select onValueChange={(value) => handleSelectChange("teamSize", value)} required>
+              <SelectTrigger>
+                <SelectValue placeholder="Select your team size" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="1-10">1-10 people</SelectItem>
+                <SelectItem value="11-50">11-50 people</SelectItem>
+                <SelectItem value="51-200">51-200 people</SelectItem>
+                <SelectItem value="201-1000">201-1000 people</SelectItem>
+                <SelectItem value="1000+">1000+ people</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
 
-          {/* Conditional Custom Task Details */}
-          {formData.task === "Other - Let me describe my use case...." && (
+          <div className="space-y-2">
+            <Label htmlFor="primaryTask">Primary Task You Want to Automate *</Label>
+            <Select onValueChange={(value) => handleSelectChange("primaryTask", value)} required>
+              <SelectTrigger>
+                <SelectValue placeholder="Select your primary use case" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="hr-onboarding">HR - Employee onboarding</SelectItem>
+                <SelectItem value="hr-compliance">HR - Compliance documentation</SelectItem>
+                <SelectItem value="finance-reimbursements">Finance - Reimbursements</SelectItem>
+                <SelectItem value="finance-vendor">Finance - Vendor onboarding</SelectItem>
+                <SelectItem value="travel-logistics">Travel & Logistics</SelectItem>
+                <SelectItem value="sales-procurement">Sales & Procurement</SelectItem>
+                <SelectItem value="education-training">Education & Training</SelectItem>
+                <SelectItem value="legal-contracts">Legal - Contract management</SelectItem>
+                <SelectItem value="other">Other - Let me describe my use case...</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          {formData.primaryTask === "other" && (
             <div className="space-y-2">
-              <Label htmlFor="customTaskDetails" className="text-sm font-medium text-gray-700">
-                Describe Your Use Case *
-              </Label>
+              <Label htmlFor="customTaskDetails">Describe Your Custom Use Case *</Label>
               <Textarea
                 id="customTaskDetails"
                 name="customTaskDetails"
                 value={formData.customTaskDetails}
                 onChange={handleChange}
-                className="w-full resize-y"
+                placeholder="Please describe the specific document workflows or processes you'd like to automate..."
                 rows={4}
-                placeholder="Please describe your specific document workflow needs, the types of forms/documents involved, and any current challenges you're facing..."
                 required
+                className="resize-y"
               />
             </div>
           )}
 
-          <Button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg font-medium"
-          >
-            {isSubmitting ? (
-              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Submitting...
-              </>
-            ) : (
-              "Join Waitlist"
-            )}
+          <Button type="submit" className="w-full py-3 text-lg font-semibold" disabled={isLoading}>
+            {isLoading ? "Submitting..." : "Join the Waitlist"}
           </Button>
         </form>
       </CardContent>

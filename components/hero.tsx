@@ -113,12 +113,14 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row items-center gap-20 my-10">
           {/* Left side - Text content */}
           <div className="flex-1 text-center">
-            <h1 className="font-hero text-4xl md:text-4xl font-bold text-gray-900 mb-10 leading-tight">
+            <h1 className="font-hero text-5xl md:text-6xl text-gradient-hero mb-10 leading-tight tracking-tight">
               Intelligent document workspace for{" "}
-              <span className="text-purple-400 transition-all duration-500 ease-in-out">{rotatingItems[index]}</span>
+              <span className="text-purple-300 font-black transition-all duration-500 ease-in-out bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                {rotatingItems[index]}
+              </span>
             </h1>
 
-            <p className="font-body text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="font-modern text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed font-medium max-w-4xl mx-auto">
               Packets uses AI to guide you through every step of documentation with built-in workflows, smart form
               assistance, and real-time validation that catches errors before they happen.
             </p>
@@ -126,15 +128,15 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row justify-center items-start sm:items-center gap-6 mb-10">
               <div className="flex items-center space-x-2">
                 <Check className="w-5 h-5 text-green-500" />
-                <span className="font-body text-gray-700 font-medium">AI-guided workflows</span>
+                <span className="font-pro text-gray-700 font-semibold">AI-guided workflows</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Check className="w-5 h-5 text-green-500" />
-                <span className="font-body text-gray-700 font-medium">Smart form completion</span>
+                <span className="font-pro text-gray-700 font-semibold">Smart form completion</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Check className="w-5 h-5 text-green-500" />
-                <span className="font-body text-gray-700 font-medium">Faster turnaround</span>
+                <span className="font-pro text-gray-700 font-semibold">Faster turnaround</span>
               </div>
             </div>
 
@@ -142,7 +144,7 @@ export default function Hero() {
               <div className="mt-8">
                 <Button
                   size="lg"
-                  className="px-8 py-4 font-semibold rounded-xl border border-indigo-500 animate-pulse-glow"
+                  className="px-10 py-5 font-pro font-bold text-lg rounded-xl border border-indigo-500 animate-pulse-glow bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                 >
                   Get Early Access
                   <ArrowRight className="ml-2 w-5 h-5" />

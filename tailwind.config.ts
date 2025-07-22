@@ -14,6 +14,12 @@ const config: Config = {
         sans: ["Helvetica Neue", "Helvetica", "Arial", "system-ui", "sans-serif"],
         brand: ["Restora", "serif"],
         body: ["Helvetica Neue", "Helvetica", "Arial", "system-ui", "sans-serif"],
+        hero: ["var(--font-poppins)", "system-ui", "sans-serif"],
+        modern: ["var(--font-montserrat)", "system-ui", "sans-serif"],
+        pro: ["var(--font-poppins)", "system-ui", "sans-serif"],
+        inter: ["var(--font-inter)", "system-ui", "sans-serif"],
+        poppins: ["var(--font-poppins)", "system-ui", "sans-serif"],
+        montserrat: ["var(--font-montserrat)", "system-ui", "sans-serif"],
       },
       colors: {
         background: "hsl(var(--background))",
@@ -95,24 +101,24 @@ const config: Config = {
           },
         },
         borderGlow: {
-          '0%': { transform: 'translateX(-100%)' },
-          '50%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(100%)' },
+          "0%": { transform: "translateX(-100%)" },
+          "50%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(100%)" },
         },
         pulseGlow: {
-      '0%, 100%': {
-        boxShadow: '0 0 0px rgba(99, 102, 241, 0.6)',
-      },
-      '50%': {
-        boxShadow: '0 0 12px rgba(99, 102, 241, 0.8)',
-      },
-    },
+          "0%, 100%": {
+            boxShadow: "0 0 0px rgba(99, 102, 241, 0.6)",
+          },
+          "50%": {
+            boxShadow: "0 0 12px rgba(99, 102, 241, 0.8)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        'border-glow': 'borderGlow 2s ease-in-out infinite',
-        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+        "border-glow": "borderGlow 2s ease-in-out infinite",
+        "pulse-glow": "pulseGlow 2s ease-in-out infinite",
       },
     },
   },
