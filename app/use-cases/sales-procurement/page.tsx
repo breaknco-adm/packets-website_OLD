@@ -469,7 +469,6 @@ export default function SalesProcurementPage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Badge className="mb-6 bg-blue-100 text-blue-800">🚀 Early Access</Badge>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">Packets is currently in development.</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">Want to preview how your team can use it?</p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">

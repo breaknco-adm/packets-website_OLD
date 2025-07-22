@@ -20,10 +20,10 @@ export default function Footer() {
                 <MapPin className="w-5 h-5 text-purple-400" />
                 <span className="font-body text-purple-400 font-medium">Made In India</span>
               </div>
-              <div className="flex items-center space-x-3">
+              {/* <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-gray-300" />
                 <span className="font-body text-gray-300">+91 98953 47638</span>
-              </div>
+              </div> */}
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-gray-300" />
                 <span className="font-body text-gray-300">admin@packets.build</span>
@@ -105,15 +105,7 @@ export default function Footer() {
               </Link>
             </div>
 
-            {/* Newsletter */}
-            <div>
-              
-              
-              <div className="flex space-x-2">
-                
-                
-              </div>
-            </div>
+
           </div>
         </div>
 

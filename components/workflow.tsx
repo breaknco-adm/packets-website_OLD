@@ -19,7 +19,7 @@ const WorkflowSection = () => {
     {
       icon: LogIn,
       title: "User Login",
-      description: "SeUser gets notified and opens the assigned packet.",
+      description: "User gets notified and opens the assigned packet.",
       color: "from-cyan-400 to-cyan-600",
       glowColor: "shadow-cyan-500/50",
       details: "Everything they need is in one place—forms, uploads, instructions."
@@ -109,12 +109,12 @@ const WorkflowSection = () => {
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-teal-200 to-blue-200 bg-clip-text text-transparent mb-6">
-            Docs Done Right — Start to Finish
+            Docs Done Right - Start to Finish
           </h2>
           
           <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
             Experience the future of workflow automation with AI-powered intelligence. 
-            Here's what a typical document workflow looks like—from assignment to completion.
+            Here's what a typical document workflow looks like - from assignment to completion.
           </p>
 
         </div>

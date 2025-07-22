@@ -78,8 +78,8 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3">
-              <Image src="/packets-logo.png" alt="Packets Logo" width={40} height={40} className="w-10 h-10" />
-              <span className="font-brand font-normal text-2xl text-gray-900">Packets</span>
+              <Image src="/packets-logo.png" alt="Packets Logo" width={40} height={60} className="w-10 h-10" />
+              <span className="font-hero font-medium text-3xl text-black">Packets</span>
             </Link>
           </div>
 
