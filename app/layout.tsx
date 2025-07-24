@@ -1,6 +1,8 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter, Poppins, Montserrat } from "next/font/google"
+import { Suspense } from "react"
+import { UTMTracker } from "@/components/utm-tracker"
 import "./globals.css"
 
 const inter = Inter({
@@ -127,6 +129,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} ${poppins.variable} ${montserrat.variable} font-sans antialiased`}>
+          <Suspense fallback={null}>
+          <UTMTracker />
+        </Suspense>
         {children}
       </body>
     </html>
