@@ -64,10 +64,10 @@ const workflowSteps = [
   },
   {
     id: 4,
-    title: "Counselor flags passport name mismatch",
-    actor: "Counselor",
+    title: "AI flags passport name mismatch",
+    actor: "Counsellor",
     time: "5 min",
-    description: "Manual review identifies discrepancy requiring correction",
+    description: "AI detects a discrepancy in submitted documents and alerts the assigned counsellor for review.",
     details: "Issue Found: Name on passport (John Smith) doesn't match academic transcripts (Jonathan Smith)",
     icon: AlertTriangle,
     color: "bg-orange-500",
@@ -143,7 +143,7 @@ export default function StudyAbroadPage() {
 
             <p className="font-hero text-lg text-gra900 mb-12 max-w-3xl mx-auto leading-relaxed">
               Packets is designed to help study abroad agencies process documents faster, with fewer mistakes, and far
-              less counselor fatigue.
+              less counsellor fatigue.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
