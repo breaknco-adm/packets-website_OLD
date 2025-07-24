@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ChevronDown, Truck, Users, GraduationCap, DollarSign, ShoppingCart, ArrowRight } from "lucide-react"
+import { ChevronDown, Truck, Users, GraduationCap, DollarSign, ShoppingCart, ArrowRight, BookOpen } from "lucide-react"
 import { useState } from "react"
 
 const useCases = [
@@ -24,6 +24,12 @@ const useCases = [
     title: "Education",
     description: "Manage student applications and academic workflows",
     href: "/use-cases/education",
+  },
+  {
+    icon: BookOpen,
+    title: "Study Abroad",
+    description: "Transform student document management for agencies",
+    href: "/use-cases/study-abroad",
   },
   {
     icon: DollarSign,
@@ -99,7 +105,7 @@ export default function Navbar() {
 
               {isUseCasesOpen && (
                 <div
-                  className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[800px] bg-white rounded-xl shadow-2xl border border-gray-100 p-6 z-50"
+                  className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[900px] bg-white rounded-xl shadow-2xl border border-gray-100 p-6 z-50"
                   onMouseEnter={handleDropdownMouseEnter}
                   onMouseLeave={handleDropdownMouseLeave}
                 >

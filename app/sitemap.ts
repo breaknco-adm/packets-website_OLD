@@ -1,56 +1,66 @@
 import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://packets.build"
-
   return [
     {
-      url: baseUrl,
+      url: "https://packets.build",
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "yearly",
       priority: 1,
     },
     {
-      url: `${baseUrl}/pricing`,
+      url: "https://packets.build/pricing",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: "https://packets.build/contact",
       lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
+      changeFrequency: "yearly",
+      priority: 0.5,
     },
     {
-      url: `${baseUrl}/early-access`,
+      url: "https://packets.build/early-access",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/use-cases/travel-logistics`,
+      url: "https://packets.build/use-cases/hr-operations",
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.7,
     },
     {
-      url: `${baseUrl}/use-cases/hr-operations`,
+      url: "https://packets.build/use-cases/sales-procurement",
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.7,
     },
     {
-      url: `${baseUrl}/use-cases/education`,
+      url: "https://packets.build/use-cases/travel-logistics",
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.7,
     },
     {
-      url: `${baseUrl}/use-cases/sales-procurement`,
+      url: "https://packets.build/use-cases/finance",
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.7,
+    },
+    {
+      url: "https://packets.build/use-cases/education",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://packets.build/use-cases/study-abroad",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
   ]
 }
