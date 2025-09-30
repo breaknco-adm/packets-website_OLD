@@ -13,13 +13,15 @@ const config: Config = {
       fontFamily: {
         sans: ["Helvetica Neue", "Helvetica", "Arial", "system-ui", "sans-serif"],
         brand: ["Restora", "serif"],
-        body: ["Helvetica Neue", "Helvetica", "Arial", "system-ui", "sans-serif"],
+        // body: ["Helvetica Neue", "Helvetica", "Arial", "system-ui", "sans-serif"],
         hero: ["var(--font-poppins)", "system-ui", "sans-serif"],
         modern: ["var(--font-montserrat)", "system-ui", "sans-serif"],
         pro: ["var(--font-poppins)", "system-ui", "sans-serif"],
         inter: ["var(--font-inter)", "system-ui", "sans-serif"],
         poppins: ["var(--font-poppins)", "system-ui", "sans-serif"],
         montserrat: ["var(--font-montserrat)", "system-ui", "sans-serif"],
+        atak: ["Atak", "sans-serif"],
+        body: ["Atak", "sans-serif"],
       },
       colors: {
         background: "hsl(var(--background))",

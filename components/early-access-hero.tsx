@@ -16,8 +16,7 @@ export default function EarlyAccessHero() {
         </h1>
 
         <p className="font-body text-xl text-gray-600 mb-4 max-w-2xl mx-auto leading-relaxed">
-          Be among the first to experience the future of document workflows. Join our exclusive early access program and
-          help shape the product.
+          Be among the first to streamline compliance workflows. Join our early access program and help shape the future of compliance management.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8">

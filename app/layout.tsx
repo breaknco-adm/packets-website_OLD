@@ -54,9 +54,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://packets.build",
-    title: "Packets - Automate your document workflows",
+    title: "Packets – Smarter Compliance Automation",
     description:
-      "End-to-end document automation platform. Docs that move themselves—from creation to approval, stamping to delivery.",
+      "Packets helps fast-growing companies achieve ISO 27001, SOC 2, GDPR, EU AI Act, and more—faster and audit-ready. Automate GRC workflows, simplify evidence collection, and stay continuously compliant.",
     siteName: "Packets",
     images: [
       {
@@ -69,9 +69,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Packets - Automate your document workflows",
+    title: "Packets – Smarter Compliance Automation",
     description:
-      "End-to-end document automation platform. Docs that move themselves—from creation to approval, stamping to delivery.",
+      "Smarter compliance automation for ISO 27001, SOC 2, GDPR, EU AI Act, and more. Faster, audit-ready, and continuous.",
     images: ["/packets-logo.png"],
   },
   robots: {
@@ -110,7 +110,7 @@ export default function RootLayout({
               "@type": "SoftwareApplication",
               name: "Packets",
               description:
-                "End-to-end document automation platform. Docs that move themselves—from creation to approval, stamping to delivery.",
+                "Smarter compliance automation for ISO 27001, SOC 2, GDPR, EU AI Act, and more. Faster, audit-ready, and continuous.",
               url: "https://packets.build",
               applicationCategory: "BusinessApplication",
               operatingSystem: "Web",

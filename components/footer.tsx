@@ -42,7 +42,7 @@ export default function Footer() {
                 Product
               </Link>
               <Link href="#use-cases" className="font-body block text-gray-300 hover:text-white transition-colors">
-                Use Cases
+                Frameworks
               </Link>
               <Link href="#pricing" className="font-body block text-gray-300 hover:text-white transition-colors">
                 Pricing
@@ -68,8 +68,7 @@ export default function Footer() {
               </Link>
               <Link
                 href="/data-protection"
-                className="font-body block text-gray-300 hover:text-white transition-colors"
-              >
+                className="font-body block text-gray-300 hover:text-white transition-colors">
                 Data Protection
               </Link>
             </div>

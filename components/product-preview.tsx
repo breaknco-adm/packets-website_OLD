@@ -6,51 +6,50 @@ const features = [
   {
     title: "Build Workflows Visually",
     description:
-      "No code needed. Use drag-and-drop tools to stitch together smart templates and automate every document process. The system breaks down complex documentation requirements into manageable steps with clear instructions.",
+      "No code needed. AI generates steps to automate control execution, evidence tasks, approvals, and notifications.",
     details: [
-      "Start with ready-made templates like Passport Upload, Bank Statement Collection, or Application Forms",
-      "Customize each step — form inputs, validations, uploads, and approvals",
-      "Add logic for who fills what, when (e.g. user vs reviewer vs approver)",
-      "Automate actions like e-stamping, email delivery, and Slack alerts",
-      "Reuse and adapt workflows across teams, clients, or regions",
+      "Start with templates for common controls and policies",
+      "Customize responsibilities (control owner, reviewer, approver)",
+      "Add logic by team, region, or framework",
+      "Reuse workflows across products and geographies",
     ],
-    image: "/images/template-builder.png?text=Workflow+Builder+Interface",
+    image: "/images/ai-assistance.png?text=Workflow+Builder+Interface",
     darkBgColor: "bg-gradient-to-br from-blue-900/20 to-purple-900/20",
   },
   {
     title: "AI Assistance",
     description:
-      "Our advanced AI assistant understands the context of each form field, providing intelligent suggestions, auto-filling repetitive information, and explaining complex requirements in simple language to streamline form completion.",
+      "Context‑aware guidance explains the “why” behind each control.",
     details: [
-      "AI-powered suggestions for form inputs", 
-      "Contextual help and explanations for complex fields", 
-      "Real-time validation to catch errors before submission",
-      "Learning from user patterns to improve suggestions over time",
-      "Supports multiple languages and formats",],
+      "Gap analysis with prioritized next steps", 
+      "Policy drafts and control narratives", 
+      "Real‑time validation and drift detection",
+      "Learns from usage to improve over time",
+    ],
     image: "/images/ai-assistance.png?text=AI+Chat+Interface",
     darkBgColor: "bg-gradient-to-br from-green-900/20 to-teal-900/20",
   },
   {
     title: "Tracking and Reminders",
     description:
-      "Track the status of every document in real-time. See who's holding things up, what's approved, and what failed.",
-    details: ["Monitor progress with a live dashboard",
-      "Get notified when actions are required",
-      "Send automated reminders to users and reviewers",
-      "View detailed logs of every action taken",
-      "Generate reports on workflow efficiency and bottlenecks"],
-    image: "/images/tracking.png?text=Dashboard+Timeline+View",
+      "See status by framework, team, and control.",
+    details: [
+      "Live dashboards and SLA tracking",
+      "Automated reminders and escalations",
+      "Full action logs and exportable reports"
+    ],
+    image: "/images/ai-assistance.png?text=Dashboard+Timeline+View",
     darkBgColor: "bg-gradient-to-br from-orange-900/20 to-red-900/20",
   },
   {
     title: "Real-time Validation",
     description:
-      "Our AI-powered validation engine continuously monitors document uploads, checking for completeness, format compliance, and content accuracy. Issues are flagged immediately with clear instructions for resolution, preventing costly errors and delays.",
-    details: ["Instantly flag inconsistencies and errors",
-      "Ensure data accuracy and compliance before submission",
-      "Catch missing fields, incorrect formats, and policy violations",
-      "Provide actionable feedback to users in real-time",
-      "Reduce downstream issues and rework by catching errors early"],
+      "Ensure completeness, format compliance, and evidence accuracy.",
+    details: [
+      "Instantly flag inconsistencies and missing artifacts",
+      "Validate against framework rules and internal policies",
+      "Reduce downstream rework by catching issues early"
+    ],
     image: "/images/form-validations.jpg?text=Smart+Form+Interface",
     darkBgColor: "bg-gradient-to-br from-teal-900/20 to-red-900/20",
   },
@@ -62,10 +61,10 @@ export default function ProductPreview() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="font-inter text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Everything you need to scale documentation Docs
+            Everything you need to scale compliance
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive AI-powered tools designed for modern documentation workflows
+            Comprehensive AI‑powered tools designed for modern GRC programs.
           </p>
         </div>
         <div className="space-y-20">
@@ -79,7 +78,7 @@ export default function ProductPreview() {
               <div className="flex-1">
                 <div className="flex items-center space-x-3 mb-4 ">
   
-                  <h3 className="font-display text-2xl md:text-3xl font-bold text-black">{feature.title}</h3>
+                  <h3 className="font-atak text-2xl md:text-3xl text-black">{feature.title}</h3>
                 </div>
                 <p className="text-lg text-gray-800 leading-relaxed mb-6">{feature.description}</p>
 

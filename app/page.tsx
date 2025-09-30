@@ -4,7 +4,7 @@ import Hero from "@/components/hero"
 import Benefits from "@/components/benefits"
 import ProductPreview from "@/components/product-preview"
 import Workflow from "@/components/workflow"
-import DocumentWorldSlides from "@/components/document-world-slides"
+import TargetAudience from "@/components/target-audience"
 import CTAFooter from "@/components/cta-footer"
 import Footer from "@/components/footer"
 
@@ -74,7 +74,7 @@ export default function Home() {
         <Benefits />
         <Workflow />
         <ProductPreview /> 
-        <DocumentWorldSlides />
+        <TargetAudience />
         <CTAFooter />
         <Footer />
       </main>

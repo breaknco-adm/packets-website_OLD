@@ -1,22 +1,22 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Check, ArrowRight } from "lucide-react"
+import { Check, ArrowRight, Zap } from "lucide-react"
 import Link from "next/link"
 
 import { useState, useEffect } from "react"
 
-const rotatingItems = ["Global Capability Centers", "AI First Companies", "Solopreneurs & Lean Teams"]
+// const rotatingItems = ["Global Capability Centers", "AI First Companies", "Solopreneurs & Lean Teams"]
 
 export default function Hero() {
-  const [index, setIndex] = useState(0)
+  // const [index, setIndex] = useState(0)
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % rotatingItems.length)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setIndex((prev) => (prev + 1) % rotatingItems.length)
+  //   }, 3000)
+  //   return () => clearInterval(interval)
+  // }, [])
 
   return (
     <section className="pt-24 pb-16 gradient-bg relative overflow-hidden">
@@ -92,6 +92,7 @@ export default function Hero() {
           </div>
         </div>
 
+
         {/* Particle Effect */}
         <div className="absolute inset-0">
           {Array.from({ length: 20 }).map((_, i) => (
@@ -114,16 +115,24 @@ export default function Hero() {
           {/* Left side - Text content */}
           <div className="flex-1 text-center">
             <h1 className="font-hero text-5xl md:text-6xl text-gradient-hero mb-10 leading-tight tracking-tight">
-              Intelligent document workspace for <br />{" "}
+              Intelligent Compliance Workspace for <br />{" "}
               <span className="text-purple-300 font-hero transition-all duration-500 ease-in-out bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                {rotatingItems[index]}
+                {/* {rotatingItems[index]} */}
+                Fast‑Growing Teams
               </span>
             </h1>
 
-            <p className="font-body text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed font-medium max-w-4xl mx-auto">
-              Packets uses AI to guide you through every step of documentation with built-in workflows, smart form
-              assistance, and real-time validation that catches errors before they happen.
+            <p className="font-atak text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed font-medium max-w-6xl mx-auto">
+              {/* <b>Packets</b> is a smarter compliance automation platform that helps fast‑growing companies achieve <b>ISO 27001, SOC 2, 
+              GDPR, EU AI Act </b>(and more) with faster, audit-ready timelines. 
+              <br/>Whether you’re starting from scratch or scaling across 
+              multiple frameworks, Packets makes GRC simple, automated, and continuous. */}
+              <b>Packets</b> is a compliance automation platform that helps fast-growing companies achieve <b>ISO 27001, SOC 2, GDPR, EU AI Act,</b>
+               and more—faster and audit-ready. From scratch or at scale, Packets makes GRC simple, automated, and continuous.
             </p>
+
+          
+            
 
             <div className="flex flex-col sm:flex-row justify-center items-start sm:items-center gap-6 mb-10">
               <div className="flex items-center space-x-2">
@@ -132,11 +141,11 @@ export default function Hero() {
               </div>
               <div className="flex items-center space-x-2">
                 <Check className="w-5 h-5 text-green-500" />
-                <span className="font-pro text-gray-700 font-semibold">Smart form completion</span>
+                <span className="font-pro text-gray-700 font-semibold">Multi‑framework mapping</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Check className="w-5 h-5 text-green-500" />
-                <span className="font-pro text-gray-700 font-semibold">Faster turnaround</span>
+                <span className="font-pro text-gray-700 font-semibold">Faster audits</span>
               </div>
             </div>
 

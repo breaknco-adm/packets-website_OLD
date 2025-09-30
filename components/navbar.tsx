@@ -95,7 +95,7 @@ export default function Navbar() {
             </Link>
 
             {/* Use Cases Dropdown - Horizontal Layout */}
-            <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <div className="relative hidden" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
               <button className="flex items-center space-x-1 font-body text-gray-600 hover:text-gray-900 font-medium">
                 <span>Use Cases</span>
                 <ChevronDown

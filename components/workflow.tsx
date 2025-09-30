@@ -10,51 +10,51 @@ const WorkflowSection = () => {
   const workflowSteps = [
     {
       icon: UserPlus,
-      title: "Workflow Assignment",
-      description: "Admin selects a predefined flow (e.g. onboarding, KYC, travel request) and assigns it to the user.",
+      title: "Framework Selection & Baseline Assessment",
+      description: "Choose ISO 27001, SOC 2, GDPR, EU AI Act (and more). Packets analyzes your current posture and creates an actionable plan.",
       color: "from-teal-400 to-teal-600",
       glowColor: "shadow-teal-500/50",
-      details: "Choose templates or build your own."
+      details: "AI analyzes existing policies, controls, and evidence"
     },
     {
       icon: LogIn,
-      title: "User Login",
-      description: "User gets notified and opens the assigned packet.",
+      title: "Control Mapping & Gap Detection",
+      description: "Auto‑map existing controls across frameworks. AI flags gaps, prioritizes actions, and assigns owners.",
       color: "from-cyan-400 to-cyan-600",
       glowColor: "shadow-cyan-500/50",
-      details: "Everything they need is in one place—forms, uploads, instructions."
+      details: "AI cross-maps controls and highlights gaps"
     },
     {
       icon: Upload,
-      title: "Form Upload & Completion",
-      description: "Smart forms with auto-completion and validation",
+      title: "Evidence Collection & Assignments",
+      description: "Automate requests, reminders, and collection from systems and people. Maintain versioned, tamper‑evident trails.",
       color: "from-blue-400 to-blue-600",
       glowColor: "shadow-blue-500/50",
-      details: "AI assists with form filling and error detection"
+      details: "Automated requests and reminders via email"
     },
     {
       icon: Eye,
-      title: "Review & Reminders",
-      description: "Admin tracks checklist progress, reviews uploads, and sends reminders if needed.",
+      title: "Risk & Vendor Management",
+      description: "Centralize risks, third‑party vendors, and their attack surfaces. Run questionnaires and automate follow‑ups.",
       color: "from-indigo-400 to-indigo-600",
       glowColor: "shadow-indigo-500/50",
-      details: "Automated reminders based on behavioral patterns"
+      details: "Centralized risk and vendor management"
     },
     {
       icon: Bot,
-      title: "AI Assistance",
-      description: "Packets' AI chatbot helps users fill forms, fix missing fields, and validate documents instantly.",
+      title: "Mock Assessments & Auditor Collaboration",
+      description: "Run unlimited dry‑runs, scope access for auditors, and share only what’s needed—securely.",
       color: "from-purple-400 to-purple-600",
       glowColor: "shadow-purple-500/50",
-      details: "Advanced AI provides contextual help and optimization"
+      details: "Unlimited dry-runs and secure auditor access"
     },
     {
       icon: CheckCircle,
-      title: "Checklist Completion",
-      description: "Automated verification and once all items are done, the packet is closed.",
+      title: "Continuous Monitoring & Trust Center",
+      description: "Track control health in real time and publish a buyer‑friendly Trust Center to close deals faster.",
       color: "from-emerald-400 to-emerald-600",
       glowColor: "shadow-emerald-500/50",
-      details: "Audit trail is saved. Docs are archived. Everyone gets a copy."
+      details: "Real-time control health tracking and Trust Center publication"
     }
   ];
 
@@ -105,16 +105,16 @@ const WorkflowSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-teal-500/20 to-blue-500/20 backdrop-blur-sm border border-teal-500/30 rounded-full px-6 py-2 mb-6">
             <Zap className="h-4 w-4 text-teal-400" />
-            <span className="text-teal-400 font-medium">Next-Gen Automation</span>
+            <span className="text-teal-400 font-medium">Next-Gen Compliance Automation</span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-teal-200 to-blue-200 bg-clip-text text-transparent mb-6">
-            Docs Done Right - Start to Finish
-          </h2>
+          <h3 className="text-5xl md:text-5xl font-atak bg-gradient-to-r from-white via-teal-200 to-blue-200 bg-clip-text text-transparent mb-8">
+            Compliance  Done Right - Start to Finish
+          </h3>
           
           <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
-            Experience the future of workflow automation with AI-powered intelligence. 
-            Here's what a typical document workflow looks like - from assignment to completion.
+            Experience the future of compliance automation with AI‑powered intelligence. 
+            Here’s what a typical compliance program looks like—from baseline to certification.
           </p>
 
         </div>
@@ -171,13 +171,13 @@ const WorkflowSection = () => {
 
                     {/* Content */}
                     <div className="flex-1 min-w-0">
-                      <h3 className={`text-2xl font-bold mb-2 transition-all duration-300 ${
+                      <h3 className={`text-2xl font-atak mb-2 transition-all duration-300 ${
                         isActive ? 'text-white' : 'text-gray-200'
                       }`}>
                         {step.title}
                       </h3>
                       
-                      <p className={`text-lg mb-3 transition-all duration-300 ${
+                      <p className={`text-1xl mb-3 transition-all duration-300 ${
                         isActive ? 'text-gray-200' : 'text-gray-400'
                       }`}>
                         {step.description}

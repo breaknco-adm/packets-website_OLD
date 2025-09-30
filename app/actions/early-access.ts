@@ -22,14 +22,14 @@ export async function submitEarlyAccessForm(formData: FormData): Promise<ActionR
     const name = formData.get("name") as string
     const email = formData.get("email") as string
     const phone = formData.get("phone") as string
-    const taskCategory = formData.get("primaryTask") as string
-    const customTask = formData.get("customTaskDetails") as string
+    // const taskCategory = formData.get("primaryTask") as string
+    // const customTask = formData.get("customTaskDetails") as string
     const utmVisitIdRaw = formData.get("utmVisitId")
     const utm_visit_id = typeof utmVisitIdRaw === "string" && utmVisitIdRaw.length > 0 ? utmVisitIdRaw : null
 
-    console.log("Received early access form submission:" + taskCategory);
+    // console.log("Received early access form submission:" + taskCategory);
     // Basic validation
-    if (!name || !email || !taskCategory) {
+    if (!name || !email ) {
       return {
         success: false,
         message: "Please fill in all required fields.",
@@ -73,8 +73,8 @@ export async function submitEarlyAccessForm(formData: FormData): Promise<ActionR
     const insertData = {
       name: name.trim(),
       email: email.toLowerCase().trim(),
-      task_category: taskCategory,
-      custom_task: customTask || null,
+      // task_category: taskCategory,
+      // custom_task: customTask || null,
       utm_visit_id,
       phone: phone ? phone.trim() : null,
     }
@@ -94,7 +94,7 @@ export async function submitEarlyAccessForm(formData: FormData): Promise<ActionR
     console.log("Early access signup successful:", {
       id: data.id,
       email: data.email,
-      taskCategory: data.task_category,
+      // taskCategory: data.task_category,
       timestamp: new Date().toISOString(),
     })
 
