@@ -62,5 +62,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: "https://packets.build/privacy",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: "https://packets.build/terms",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: "https://packets.build/cookies",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
   ]
 }
