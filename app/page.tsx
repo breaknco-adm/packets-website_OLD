@@ -9,28 +9,33 @@ import CTAFooter from "@/components/cta-footer"
 import Footer from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Packets - Automate your document workflows",
+  title: "packets - Build Trust with AI Compliance | ISO · SOC 2 · GDPR · HIPAA",
   description:
-    "End-to-end document automation platform. Docs that move themselves—from creation to approval, stamping to delivery. Faster turnaround, fewer errors, fully auditable.",
+    "Smarter compliance automation for ISO 27001, SOC 2, GDPR, EU AI Act, and more. Faster, audit-ready, and continuous.",
   keywords: [
-    "document automation",
-    "workflow automation",
-    "AI-powered documents",
-    "business process automation",
-    "digital transformation",
+    "AI compliance tool",
+    "ISO 27001 compliance",
+    "GDPR compliance tool",
+    "compliance management platform",
+    "SOC 2 compliance",
+    "Risk and compliance management",
+    "Regulatory compliance software",
+    "HIPAA compliance tool",
+    "Compliance automation",
+    "Continuous compliance monitoring",
   ],
   openGraph: {
-    title: "Packets - Automate your document workflows",
+    title: "packets - Build Trust with AI Compliance | ISO · SOC 2 · GDPR · HIPAA",
     description:
-      "End-to-end document automation platform. Docs that move themselves—from creation to approval, stamping to delivery.",
+      "Smarter compliance automation for ISO 27001, SOC 2, GDPR, EU AI Act, and more",
     url: "https://packets.build",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Packets - Automate your document workflows",
+    title: "packets - Build Trust with AI Compliance | ISO · SOC 2 · GDPR · HIPAA",
     description:
-      "End-to-end document automation platform. Docs that move themselves—from creation to approval, stamping to delivery.",
+      "Smarter compliance automation for ISO 27001, SOC 2, GDPR, EU AI Act, and more",
   },
   alternates: {
     canonical: "https://packets.build",
@@ -46,23 +51,23 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "Packets - Document Workflow Automation",
+            name: "packets - Smarter Compliance Workflows",
             description:
-              "End-to-end document automation platform. Docs that move themselves—from creation to approval, stamping to delivery.",
+              "Smarter compliance automation for ISO 27001, SOC 2, GDPR, EU AI Act, and more",
             url: "https://packets.build",
             mainEntity: {
               "@type": "SoftwareApplication",
-              name: "Packets",
+              name: "packets",
               applicationCategory: "BusinessApplication",
               description:
-                "Automate document workflows with AI-powered tools for creation, approval, stamping, and delivery.",
+                "Smarter compliance automation for ISO 27001, SOC 2, GDPR, EU AI Act, and more",
               featureList: [
-                "AI-powered document flows",
-                "Built-in AI Chatbot",
+                "AI‑powered framework & control mapping",
+                "Built‑in AI Copilot",
                 "Smart approvals & Reminders",
                 "Track everything, miss nothing",
                 "Real-time validation",
-                "AI form assistance",
+                "AI evidence assistance",
               ],
             },
           }),

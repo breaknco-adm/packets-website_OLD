@@ -12,7 +12,7 @@ export default function EarlyAccessHero() {
         </div>
 
         <h1 className="font-body text-4xl md:text-5xl font-bold text-gray-900 mb-2 leading-tight">
-          Get Early Access to <span className="font-brand text-gradient">Packets</span>
+          Get Early Access to <span className="font-brand text-gradient">packets</span>
         </h1>
 
         <p className="font-body text-xl text-gray-600 mb-4 max-w-2xl mx-auto leading-relaxed">

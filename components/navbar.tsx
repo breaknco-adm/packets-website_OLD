@@ -3,7 +3,17 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ChevronDown, Truck, Users, GraduationCap, DollarSign, ShoppingCart, ArrowRight, BookOpen } from "lucide-react"
+import {
+  ChevronDown,
+  Truck,
+  Users,
+  GraduationCap,
+  DollarSign,
+  ShoppingCart,
+  ArrowRight,
+  BookOpen,
+  Building2,
+} from "lucide-react"
 import { useState } from "react"
 
 const useCases = [
@@ -45,22 +55,39 @@ const useCases = [
   },
 ]
 
+const solutions = [
+  {
+    icon: Building2,
+    title: "Consultancies",
+    description: "Deliver ISO/SOC programs faster with AI-assisted compliance",
+    href: "/solutions/consultancies",
+  },
+]
+
 export default function Navbar() {
   const [isUseCasesOpen, setIsUseCasesOpen] = useState(false)
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
   const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null)
 
-  const handleMouseEnter = () => {
+  const handleMouseEnter = (menu: "useCases" | "solutions") => {
     if (hoverTimeout) {
       clearTimeout(hoverTimeout)
       setHoverTimeout(null)
     }
-    setIsUseCasesOpen(true)
+    if (menu === "useCases") {
+      setIsUseCasesOpen(true)
+      setIsSolutionsOpen(false)
+    } else {
+      setIsSolutionsOpen(true)
+      setIsUseCasesOpen(false)
+    }
   }
 
   const handleMouseLeave = () => {
     const timeout = setTimeout(() => {
       setIsUseCasesOpen(false)
-    }, 300) // 300ms delay before closing
+      setIsSolutionsOpen(false)
+    }, 300)
     setHoverTimeout(timeout)
   }
 
@@ -74,6 +101,7 @@ export default function Navbar() {
   const handleDropdownMouseLeave = () => {
     const timeout = setTimeout(() => {
       setIsUseCasesOpen(false)
+      setIsSolutionsOpen(false)
     }, 300)
     setHoverTimeout(timeout)
   }
@@ -84,8 +112,8 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3">
-              <Image src="/packets-logo.png" alt="Packets Logo" width={40} height={60} className="w-10 h-10" />
-              <span className="font-hero font-medium text-3xl text-black">Packets</span>
+              <Image src="/packets-logo.png" alt="packets Logo" width={40} height={60} className="w-10 h-10" />
+              <span className="font-hero font-medium text-3xl text-black">packets</span>
             </Link>
           </div>
 
@@ -94,8 +122,55 @@ export default function Navbar() {
               Product
             </Link>
 
-            {/* Use Cases Dropdown - Horizontal Layout */}
-            <div className="relative hidden" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            {/* Solutions Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => handleMouseEnter("solutions")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button className="flex items-center space-x-1 font-body text-gray-600 hover:text-gray-900 font-medium">
+                <span>Solutions</span>
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-200 ${isSolutionsOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+
+              {isSolutionsOpen && (
+                <div
+                  className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[400px] bg-white rounded-xl shadow-2xl border border-gray-100 p-6 z-50"
+                  onMouseEnter={handleDropdownMouseEnter}
+                  onMouseLeave={handleDropdownMouseLeave}
+                >
+                  <div className="space-y-2">
+                    {solutions.map((solution, index) => (
+                      <Link
+                        key={index}
+                        href={solution.href}
+                        className="flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
+                        onClick={() => setIsSolutionsOpen(false)}
+                      >
+                        <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center group-hover:bg-purple-200 transition-colors flex-shrink-0">
+                          <solution.icon className="w-6 h-6 text-purple-600" />
+                        </div>
+                        <div>
+                          <h4 className="font-body font-semibold text-gray-900 group-hover:text-purple-600 transition-colors mb-1">
+                            {solution.title}
+                          </h4>
+                          <p className="font-body text-sm text-gray-600 leading-relaxed">{solution.description}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Use Cases Dropdown - Hidden for now */}
+            <div
+              className="relative hidden"
+              onMouseEnter={() => handleMouseEnter("useCases")}
+              onMouseLeave={handleMouseLeave}
+            >
               <button className="flex items-center space-x-1 font-body text-gray-600 hover:text-gray-900 font-medium">
                 <span>Use Cases</span>
                 <ChevronDown

@@ -24,7 +24,7 @@ export default function TermsOfService() {
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Agreement to Terms</h2>
               <p className="text-gray-700 leading-relaxed">
-                These Terms of Service ("Terms") constitute a legally binding agreement between you and Packets
+                These Terms of Service ("Terms") constitute a legally binding agreement between you and packets
                 ("Company," "we," "us," or "our") concerning your access to and use of the packets.build website and
                 platform (collectively, the "Services"). By accessing or using our Services, you agree to be bound by
                 these Terms.
@@ -160,7 +160,7 @@ export default function TermsOfService() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Rights</h3>
                   <p className="text-gray-700">
                     All content, features, and functionality of the Services, including but not limited to text,
-                    graphics, logos, icons, images, audio, video, software, and their arrangement, are owned by Packets
+                    graphics, logos, icons, images, audio, video, software, and their arrangement, are owned by packets
                     or our licensors and are protected by intellectual property laws.
                   </p>
                 </div>
@@ -229,7 +229,7 @@ export default function TermsOfService() {
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Indemnification</h2>
               <p className="text-gray-700">
-                You agree to indemnify, defend, and hold harmless Packets, its affiliates, officers, directors,
+                You agree to indemnify, defend, and hold harmless packets, its affiliates, officers, directors,
                 employees, and agents from any claims, liabilities, damages, losses, and expenses, including reasonable
                 attorneys' fees, arising out of or related to your use of the Services, violation of these Terms, or
                 infringement of any third-party rights.

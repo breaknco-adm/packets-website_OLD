@@ -11,7 +11,7 @@ const WorkflowSection = () => {
     {
       icon: UserPlus,
       title: "Framework Selection & Baseline Assessment",
-      description: "Choose ISO 27001, SOC 2, GDPR, EU AI Act (and more). Packets analyzes your current posture and creates an actionable plan.",
+      description: "Choose ISO 27001, SOC 2, GDPR, EU AI Act (and more). packets analyzes your current posture and creates an actionable plan.",
       color: "from-teal-400 to-teal-600",
       glowColor: "shadow-teal-500/50",
       details: "AI analyzes existing policies, controls, and evidence"

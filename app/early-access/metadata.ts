@@ -1,14 +1,14 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Get Early Access to Packets | AI-Powered Documentation Workflow Platform",
+  title: "Get Early Access to packets | AI-Powered Compliance Workflow Platform",
   description:
-    "Join the waitlist for early access to Packets. Be among the first to experience our AI-powered documentation workflow platform that streamlines business processes.",
+    "Join the waitlist for early access to packets. Be among the first to experience our AI-powered documentation workflow platform that streamlines business processes.",
   keywords: [
     "early access",
     "waitlist",
     "beta access",
-    "documentation automation",
+    "compliance automation",
     "workflow platform",
     "AI assistance",
   ],
@@ -16,16 +16,16 @@ export const metadata: Metadata = {
     canonical: "/early-access",
   },
   openGraph: {
-    title: "Get Early Access to Packets | AI-Powered Documentation Workflow Platform",
+    title: "Get Early Access to packets | AI-Powered compliance Workflow Platform",
     description:
-      "Join the waitlist for early access to Packets. Be among the first to experience our AI-powered documentation workflow platform.",
+      "Join the waitlist for early access to packets. Be among the first to experience our AI-powered compliance workflow platform.",
     url: "https://packets.build/early-access",
     images: [
       {
         url: "/images/early-access-og.png",
         width: 1200,
         height: 630,
-        alt: "Packets - Get Early Access",
+        alt: "packets - Get Early Access",
       },
     ],
   },

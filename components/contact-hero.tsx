@@ -7,7 +7,7 @@ export default function ContactHero() {
         <h1 className="font-body text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">Get in Touch</h1>
 
         <p className="font-body text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-          Ready to transform your document workflows? We're here to help you get started with Packets and answer any
+          Ready to transform your compliance workflows? We're here to help you get started with packets and answer any
           questions you might have.
         </p>
 

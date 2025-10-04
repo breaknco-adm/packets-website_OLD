@@ -142,7 +142,7 @@ export default function StudyAbroadPage() {
             </p>
 
             <p className="font-hero text-lg text-gra900 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Packets is designed to help study abroad agencies process documents faster, with fewer mistakes, and far
+              packets is designed to help study abroad agencies process documents faster, with fewer mistakes, and far
               less counsellor fatigue.
             </p>
 
@@ -165,7 +165,7 @@ export default function StudyAbroadPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="font-hero text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                What you'll get with Packets
+                What you'll get with packets
               </h2>
             </div>
 
@@ -240,7 +240,7 @@ export default function StudyAbroadPage() {
                 Example Workflow: Visa Filing Packet
               </h2>
               <p className="font-body text-lg text-gray-600 max-w-3xl mx-auto">
-                See how Packets transforms the traditional document collection process into a streamlined, error-free
+                See how packets transforms the traditional document collection process into a streamlined, error-free
                 workflow
               </p>
             </div>
@@ -408,7 +408,7 @@ export default function StudyAbroadPage() {
               Don't Let Old Processes Hurt Your Growth
             </h2>
             <p className="font-body text-xl text-indigo-100 mb-8 leading-relaxed">
-              Top-performing agencies are already streamlining operations with Packets.
+              Top-performing agencies are already streamlining operations with packets.
               <br />
               Why stay stuck in document chaos when you can move faster, smarter, and cleaner?
             </p>

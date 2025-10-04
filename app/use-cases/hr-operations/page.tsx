@@ -173,7 +173,7 @@ export default function HROperationsPage() {
             </h1>
 
             <p className="font-body text-xl text-gray-600 mb-8 leading-relaxed animate-fade-in-delay">
-              Packets let HR teams run structured, error-free documentation workflows with zero follow-up. Everything
+              packets let HR teams run structured, error-free documentation workflows with zero follow-up. Everything
               trackable. Everything compliant.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-2">
@@ -198,7 +198,7 @@ export default function HROperationsPage() {
             <h2 className="font-body text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               What you'll get with{" "}
               <span className="relative">
-                Packets
+                packets
                 <Sparkles className="absolute -top-2 -right-8 w-6 h-6 text-yellow-500 animate-pulse" />
               </span>
             </h2>

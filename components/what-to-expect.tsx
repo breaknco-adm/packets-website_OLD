@@ -5,7 +5,7 @@ const expectations = [
     icon: Rocket,
     title: "Early Access Launch",
     description:
-      "Be the first to experience Packets with exclusive early access to all features and capabilities before the public launch.",
+      "Be the first to experience packets with exclusive early access to all features and capabilities before the public launch.",
     color: "bg-blue-100 text-blue-600",
   },
   {
@@ -54,7 +54,7 @@ export default function WhatToExpect() {
         <div className="text-center mt-12">
           <div className="bg-blue-50 rounded-xl p-6 max-w-2xl mx-auto">
             <p className="font-body text-blue-800 font-medium">
-              🎉 Limited spots available! Join now to secure your early access and be part of the Packets journey from
+              🎉 Limited spots available! Join now to secure your early access and be part of the packets journey from
               day one.
             </p>
           </div>

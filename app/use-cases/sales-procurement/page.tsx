@@ -99,7 +99,7 @@ export default function SalesProcurementPage() {
     {
       icon: Brain,
       title: "AI-assisted drafting",
-      description: "Let Packets help fill standard clauses, suggest terms, and auto-flag missing compliance fields.",
+      description: "Let packets help fill standard clauses, suggest terms, and auto-flag missing compliance fields.",
       emoji: "🧠",
       stats: "AI-powered",
       gradient: "from-orange-500 to-red-500",
@@ -202,7 +202,7 @@ export default function SalesProcurementPage() {
               Standardize, send, and track documents—faster than ever.
             </p>
             <p className="font-body text-lg text-gray-500 mb-12 max-w-3xl mx-auto">
-              Packets will help sales and procurement teams move deals forward without chasing PDFs or managing chaos in
+              packets will help sales and procurement teams move deals forward without chasing PDFs or managing chaos in
               email threads.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -224,7 +224,7 @@ export default function SalesProcurementPage() {
       <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">What you'll get with Packets</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">What you'll get with packets</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Powerful tools designed to streamline your sales and procurement workflows
             </p>
@@ -277,7 +277,7 @@ export default function SalesProcurementPage() {
               Example Workflow: Procurement Contract
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Watch how Packets streamlines your procurement process from start to finish
+              Watch how packets streamlines your procurement process from start to finish
             </p>
 
             {/* Workflow Controls */}

@@ -214,7 +214,7 @@ export default function EducationPage() {
 
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 mb-12 border border-blue-100 animate-fade-in-delay-2">
               <p className="text-lg text-gray-800 leading-relaxed">
-                <span className="font-semibold text-blue-600">Packets</span> will help educational institutions and
+                <span className="font-semibold text-blue-600">packets</span> will help educational institutions and
                 edtech companies streamline high-volume, repetitive document flows—powered by AI.
               </p>
             </div>
@@ -238,8 +238,8 @@ export default function EducationPage() {
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              What you'll get with <span className="text-blue-600">Packets</span>
+            <h2 className="font-atak text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              What you'll get with <span className="text-blue-600">packets</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Everything you need to transform your educational documentation workflows

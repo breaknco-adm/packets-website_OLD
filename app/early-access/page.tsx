@@ -8,26 +8,26 @@ import Footer from "@/components/footer"
 export const metadata: Metadata = {
   title: "Get Early Access - Join the Beta",
   description:
-    "Get early access to Packets document automation platform. Be among the first to experience AI-powered workflow automation and earn exclusive rewards.",
+    "Get early access to packets document automation platform. Be among the first to experience AI-powered compliance workflow automation and earn exclusive rewards.",
   keywords: [
     "early access",
     "beta access",
-    "document automation beta",
+    "compliance automation beta",
     "workflow automation early access",
-    "AI document tools beta",
+    "AI compliance tools beta",
   ],
   openGraph: {
-    title: "Get Early Access - Join the Beta | Packets",
+    title: "Get Early Access - Join the Beta | packets",
     description:
-      "Get early access to Packets document automation platform. Be among the first to experience AI-powered workflow automation and earn exclusive rewards.",
+      "Get early access to packets document automation platform. Be among the first to experience AI-powered compliance workflow automation and earn exclusive rewards.",
     url: "https://packets.build/early-access",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Get Early Access - Join the Beta | Packets",
+    title: "Get Early Access - Join the Beta | packets",
     description:
-      "Get early access to Packets document automation platform. Be among the first to experience AI-powered workflow automation.",
+      "Get early access to packets compliance automation platform. Be among the first to experience AI-powered workflow automation.",
   },
   alternates: {
     canonical: "https://packets.build/early-access",
@@ -43,14 +43,14 @@ export default function EarlyAccessPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "Early Access - Packets",
+            name: "Early Access - packets",
             description:
-              "Join the early access program for Packets document automation platform and be among the first to experience AI-powered workflows.",
+              "Join the early access program for packets compliance automation platform and be among the first to experience AI-powered workflows.",
             url: "https://packets.build/early-access",
             mainEntity: {
               "@type": "WebApplication",
-              name: "Packets Early Access",
-              description: "Early access program for document automation platform",
+              name: "packets Early Access",
+              description: "Early access program for compliance automation platform",
               applicationCategory: "BusinessApplication",
               offers: {
                 "@type": "Offer",

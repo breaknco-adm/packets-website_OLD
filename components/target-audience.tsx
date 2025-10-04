@@ -9,57 +9,58 @@ const slides = [
     id: 1,
     icon: Building2,
     emoji: "🚀",
-    title: "For Startups",
+    title: "For Consultancies",
     headline: "",
     description:
-      "Get audit-ready in weeks, not months. Land your first enterprise deals with a public Trust Center.",
+      "Manage multiple client audits and compliance projects with ease. Collaborate with auditors in-platform, no email sprawl.",
     features: [
-      "Collaborate with auditors in-platform, no email sprawl",
       "Stay audit-ready as you grow and scale",
       "Automate evidence collection and reminders",
       "Use AI to draft policies and control narratives",
       "Set it up once, reuse forever",
-      "Win bigger deals and unlock growth by achieving compliance quickly."      
+      "Win bigger deals and unlock growth by achieving compliance quickly.",
+      "Centralize risk and vendor management",
+
     ],
     color: "from-blue-500 to-purple-600",
     bgColor: "bg-gradient-to-br from-blue-50 to-purple-50",
     darkBgColor: "bg-gradient-to-br from-blue-900/20 to-purple-900/20",
   },
-  {
-    id: 2,
-    icon: Bot,
-    emoji: "📈",
-    title: "For Scaleups & GCCs",
-    headline: "",
-    description:
-      "Standardize controls across products and geographies. Keep evidence fresh with continuous monitoring.",
-    features: [
-      "Centralize risk and vendor management",
-      "Streamline your operations while maintaining real-time visibility over your security and compliance program.",
-      "Automate recurring workflows and evidence collection",
-      "Easily manage compliance across multiple teams, products, and regions."
+  // {
+  //   id: 2,
+  //   icon: Bot,
+  //   emoji: "📈",
+  //   title: "For Scaleups & GCCs",
+  //   headline: "",
+  //   description:
+  //     "Standardize controls across products and geographies. Keep evidence fresh with continuous monitoring.",
+  //   features: [
+  //     "Centralize risk and vendor management",
+  //     "Streamline your operations while maintaining real-time visibility over your security and compliance program.",
+  //     "Automate recurring workflows and evidence collection",
+  //     "Easily manage compliance across multiple teams, products, and regions."
       
-    ],
-    color: "from-green-500 to-teal-600",
-    bgColor: "bg-gradient-to-br from-green-50 to-teal-50",
-    darkBgColor: "bg-gradient-to-br from-green-900/20 to-teal-900/20",
-  },
-  {
-    id: 3,
-    icon: User,
-    emoji: "🏢",
-    title: "For Enterprise",
-    headline: "",
-    description: "Integrate with your systems, centralize risk and vendors, and enable auditor collaboration without email sprawl.",
-    features: [
-      "Access compliance solutions tailored for large organizations",
-      "Built to scale with your needs",
-      "Enterprise-grade security and robust controls",
-    ],
-    color: "from-orange-500 to-red-600",
-    bgColor: "bg-gradient-to-br from-orange-50 to-red-50",
-    darkBgColor: "bg-gradient-to-br from-orange-900/20 to-red-900/20",
-  },
+  //   ],
+  //   color: "from-green-500 to-teal-600",
+  //   bgColor: "bg-gradient-to-br from-green-50 to-teal-50",
+  //   darkBgColor: "bg-gradient-to-br from-green-900/20 to-teal-900/20",
+  // },
+  // {
+  //   id: 3,
+  //   icon: User,
+  //   emoji: "🏢",
+  //   title: "For Enterprise",
+  //   headline: "",
+  //   description: "Integrate with your systems, centralize risk and vendors, and enable auditor collaboration without email sprawl.",
+  //   features: [
+  //     "Access compliance solutions tailored for large organizations",
+  //     "Built to scale with your needs",
+  //     "Enterprise-grade security and robust controls",
+  //   ],
+  //   color: "from-orange-500 to-red-600",
+  //   bgColor: "bg-gradient-to-br from-orange-50 to-red-50",
+  //   darkBgColor: "bg-gradient-to-br from-orange-900/20 to-red-900/20",
+  // },
 ]
 
 export default function TargetAudience() {
@@ -102,12 +103,12 @@ export default function TargetAudience() {
         <div className="text-center mb-16">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <span className="text-2xl">🎯</span>
-            <h2 className="font-brand text-3xl md:text-4xl font-bold text-white">
+            <h2 className="font-atak text-3xl md:text-4xl text-white">
               Built for the new trust‑driven world
             </h2>
           </div>
           <p className="font-body text-xl text-gray-300 max-w-4xl mx-auto">
-           Packets fits the way modern teams work—whether you’re formalizing security or scaling across regions and customers.
+           packets fits the way modern teams work—whether you’re formalizing security or scaling across regions and customers.
           </p>
         </div>
 
@@ -121,7 +122,7 @@ export default function TargetAudience() {
                   <div className="text-4xl">{currentSlideData.emoji}</div>
                   <div>
                     <h3 className="font-body text-2xl md:text-3xl font-bold text-white">{currentSlideData.title}</h3>
-                    <div className={`w-12 h-1 bg-gradient-to-r ${currentSlideData.color} rounded-full mt-2`}></div>
+                    <div className={`w-200 h-1 bg-gradient-to-r ${currentSlideData.color} rounded-full mt-2`}></div>
                   </div>
                 </div>
 
@@ -168,7 +169,7 @@ export default function TargetAudience() {
           </div>
 
           {/* Navigation Arrows */}
-          <button
+          {/* <button
             onClick={prevSlide}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white/20 transition-all border border-white/20"
           >
@@ -180,7 +181,7 @@ export default function TargetAudience() {
             className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white/20 transition-all border border-white/20"
           >
             <ChevronRight className="w-6 h-6 text-white" />
-          </button>
+          </button> */}
         </div>
 
         {/* Slide Indicators */}

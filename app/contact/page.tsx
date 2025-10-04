@@ -8,7 +8,7 @@ import ContactInfo from "@/components/contact-info"
 export const metadata: Metadata = {
   title: "Contact Us - Get in Touch",
   description:
-    "Contact Packets for document automation solutions. Get support, request demos, or discuss your workflow automation needs with our team.",
+    "Contact packets for iso compliance solutions. Get support, request demos, or discuss your workflow automation needs with our team.",
   keywords: [
     "contact packets",
     "document automation support",
@@ -17,17 +17,17 @@ export const metadata: Metadata = {
     "get in touch",
   ],
   openGraph: {
-    title: "Contact Us - Get in Touch | Packets",
+    title: "Contact Us - Get in Touch | packets",
     description:
-      "Contact Packets for document automation solutions. Get support, request demos, or discuss your workflow automation needs with our team.",
+      "Contact packets for document automation solutions. Get support, request demos, or discuss your compliance workflow automation needs with our team.",
     url: "https://packets.build/contact",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Us - Get in Touch | Packets",
+    title: "Contact Us - Get in Touch | packets",
     description:
-      "Contact Packets for document automation solutions. Get support, request demos, or discuss your workflow automation needs.",
+      "Contact packets for iso compliance automation solutions. Get support, request demos, or discuss your workflow automation needs.",
   },
   alternates: {
     canonical: "https://packets.build/contact",
@@ -43,12 +43,12 @@ export default function ContactPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            name: "Contact Packets",
-            description: "Get in touch with Packets for document automation solutions and support.",
+            name: "Contact packets",
+            description: "Get in touch with packets for compliance automation solutions and support.",
             url: "https://packets.build/contact",
             mainEntity: {
               "@type": "Organization",
-              name: "Packets",
+              name: "packets",
               email: "admin@packets.build",
               telephone: "+91 98953 47638",
               address: {

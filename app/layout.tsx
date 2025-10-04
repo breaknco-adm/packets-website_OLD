@@ -24,23 +24,22 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: "Packets - Automate your document workflows",
-    template: "%s | Packets",
+    default: "packets - Build Trust with AI Compliance | ISO · SOC 2 · GDPR · HIPAA",
+    template: "%s | packets",
   },
   description:
     "End-to-end document automation platform. Docs that move themselves—from creation to approval, stamping to delivery. Faster turnaround, fewer errors, fully auditable.",
   keywords: [
-    "document automation",
+    "smarter compliance automation platform",
     "workflow automation",
     "document management",
     "AI-powered documents",
     "business process automation",
     "digital transformation",
-    "paperless office",
   ],
-  authors: [{ name: "Packets" }],
-  creator: "Packets",
-  publisher: "Packets",
+  authors: [{ name: "packets" }],
+  creator: "packets",
+  publisher: "packets",
   formatDetection: {
     email: false,
     address: false,
@@ -54,22 +53,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://packets.build",
-    title: "Packets – Smarter Compliance Automation",
+    title: "packets – Smarter Compliance Automation",
     description:
-      "Packets helps fast-growing companies achieve ISO 27001, SOC 2, GDPR, EU AI Act, and more—faster and audit-ready. Automate GRC workflows, simplify evidence collection, and stay continuously compliant.",
-    siteName: "Packets",
+      "packets helps fast-growing companies achieve ISO 27001, SOC 2, GDPR, EU AI Act, and more—faster and audit-ready. Automate GRC workflows, simplify evidence collection, and stay continuously compliant.",
+    siteName: "packets",
     images: [
       {
         url: "/packets-logo.png",
         width: 1200,
         height: 630,
-        alt: "Packets - Document Workflow Automation",
+        alt: "packets - Smarter Compliance Automation",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Packets – Smarter Compliance Automation",
+    title: "packets – Smarter Compliance Automation",
     description:
       "Smarter compliance automation for ISO 27001, SOC 2, GDPR, EU AI Act, and more. Faster, audit-ready, and continuous.",
     images: ["/packets-logo.png"],
@@ -108,7 +107,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              name: "Packets",
+              name: "packets",
               description:
                 "Smarter compliance automation for ISO 27001, SOC 2, GDPR, EU AI Act, and more. Faster, audit-ready, and continuous.",
               url: "https://packets.build",
@@ -121,7 +120,7 @@ export default function RootLayout({
               },
               provider: {
                 "@type": "Organization",
-                name: "Packets",
+                name: "packets",
                 url: "https://packets.build",
               },
             }),

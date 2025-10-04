@@ -37,7 +37,7 @@ export default function FinancePage() {
 
 
             <p className="font-modern text-xl text-gray-600 mb-8 leading-relaxed">
-              Packets helps finance teams run high-trust, low-touch workflows for
+              packets helps finance teams run high-trust, low-touch workflows for
               reimbursements, audits, vendor onboarding, and tax documentation—without chasing forms or sending
               reminders.
             </p>
@@ -60,7 +60,7 @@ export default function FinancePage() {
       <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-hero text-4xl font-bold text-gray-900 mb-4">What you'll get with Packets</h2>
+            <h2 className="font-hero text-4xl font-bold text-gray-900 mb-4">What you'll get with packets</h2>
             <p className="font-modern text-xl text-gray-600 max-w-3xl mx-auto">
               Streamline your finance operations with intelligent automation
             </p>
@@ -156,7 +156,7 @@ export default function FinancePage() {
               Example Workflow: Tax Document Collection
             </h2>
             <p className="font-modern text-xl text-gray-600 max-w-3xl mx-auto">
-              See how Packets streamlines complex finance processes
+              See how packets streamlines complex finance processes
             </p>
           </div>
 

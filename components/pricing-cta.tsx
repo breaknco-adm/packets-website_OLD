@@ -11,7 +11,7 @@ export default function PricingCTA() {
         {/* <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center">
           <h3 className="font-body text-2xl font-bold text-gray-900 mb-4">Need Help Choosing?</h3>
           <p className="font-body text-gray-600 mb-6 max-w-2xl mx-auto">
-            Our team is here to help you understand how Packets can transform your document workflows. Reach out for a
+            Our team is here to help you understand how packets can transform your document workflows. Reach out for a
             consultation and we'll create a solution that fits your needs perfectly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

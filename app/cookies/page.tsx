@@ -31,7 +31,7 @@ export default function CookiePolicy() {
                 settings.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                This Cookie Policy explains how Packets ("we," "us," or "our") uses cookies and similar tracking
+                This Cookie Policy explains how packets ("we," "us," or "our") uses cookies and similar tracking
                 technologies on our website at packets.build (the "Site").
               </p>
             </section>

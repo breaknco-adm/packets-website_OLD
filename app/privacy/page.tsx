@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Introduction</h2>
               <p className="text-gray-700 leading-relaxed">
-                Welcome to Packets ("we," "our," or "us"). We are committed to protecting your personal information and
+                Welcome to packets ("we," "our," or "us"). We are committed to protecting your personal information and
                 your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your
                 information when you use our document workflow automation platform at packets.build.
               </p>

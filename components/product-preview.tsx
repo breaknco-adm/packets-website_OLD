@@ -60,7 +60,7 @@ export default function ProductPreview() {
     <section className="py-20 gradient-bg-blue">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="font-inter text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="font-atak text-3xl md:text-4xl  text-gray-900 mb-4">
             Everything you need to scale compliance
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

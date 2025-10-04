@@ -104,7 +104,7 @@ export async function submitEarlyAccessForm(formData: FormData): Promise<ActionR
     return {
       success: true,
       message:
-        "Thank you for your interest! You've been added to our early access list. We'll notify you when Packets becomes available.",
+        "Thank you for your interest! You've been added to our early access list. We'll notify you when packets becomes available.",
     }
   } catch (error) {
     console.error("Unexpected error in early access form submission:", error)

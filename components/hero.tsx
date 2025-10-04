@@ -3,20 +3,13 @@
 import { Button } from "@/components/ui/button"
 import { Check, ArrowRight, Zap } from "lucide-react"
 import Link from "next/link"
+import { motion } from "framer-motion";
 
 import { useState, useEffect } from "react"
 
 // const rotatingItems = ["Global Capability Centers", "AI First Companies", "Solopreneurs & Lean Teams"]
 
 export default function Hero() {
-  // const [index, setIndex] = useState(0)
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setIndex((prev) => (prev + 1) % rotatingItems.length)
-  //   }, 3000)
-  //   return () => clearInterval(interval)
-  // }, [])
 
   return (
     <section className="pt-24 pb-16 gradient-bg relative overflow-hidden">
@@ -123,16 +116,9 @@ export default function Hero() {
             </h1>
 
             <p className="font-atak text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed font-medium max-w-6xl mx-auto">
-              {/* <b>Packets</b> is a smarter compliance automation platform that helps fast‑growing companies achieve <b>ISO 27001, SOC 2, 
-              GDPR, EU AI Act </b>(and more) with faster, audit-ready timelines. 
-              <br/>Whether you’re starting from scratch or scaling across 
-              multiple frameworks, Packets makes GRC simple, automated, and continuous. */}
-              <b>Packets</b> is a compliance automation platform that helps fast-growing companies achieve <b>ISO 27001, SOC 2, GDPR, EU AI Act,</b>
-               and more—faster and audit-ready. From scratch or at scale, Packets makes GRC simple, automated, and continuous.
+              <b>packets</b> is a smarter compliance automation platform that helps fast‑growing companies , 
+              <b>GRC simple, automated, and continuous</b>
             </p>
-
-          
-            
 
             <div className="flex flex-col sm:flex-row justify-center items-start sm:items-center gap-6 mb-10">
               <div className="flex items-center space-x-2">

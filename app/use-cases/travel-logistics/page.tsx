@@ -21,13 +21,13 @@ import {
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Travel & Logistics Document Automation | Packets",
+  title: "Travel & Logistics Document Automation | packets",
   description:
-    "Streamline visa applications, travel permits, and logistics documentation with Packets' AI-powered workflow automation. Reduce processing time by 85% and eliminate manual errors.",
+    "Streamline visa applications, travel permits, and logistics documentation with packets' AI-powered workflow automation. Reduce processing time by 85% and eliminate manual errors.",
   keywords:
     "travel document automation, visa application workflow, logistics documentation, travel permits, document processing, workflow automation",
   openGraph: {
-    title: "Travel & Logistics Document Automation | Packets",
+    title: "Travel & Logistics Document Automation | packets",
     description: "Automate visa applications, travel permits, and logistics documentation with AI-powered workflows.",
     type: "website",
   },
@@ -182,7 +182,7 @@ export default function TravelLogisticsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-brand text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              How Packets Transforms Travel Documentation
+              How packets Transforms Travel Documentation
             </h2>
             <p className="font-body text-xl text-gray-600 max-w-3xl mx-auto">
               Our AI-powered platform handles the entire documentation workflow from form completion to final
@@ -250,7 +250,7 @@ export default function TravelLogisticsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-brand text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Packets for Travel & Logistics?
+              Why Choose packets for Travel & Logistics?
             </h2>
             <p className="font-body text-xl text-gray-600 max-w-3xl mx-auto">
               Transform your travel documentation process with intelligent automation that ensures compliance and
@@ -284,7 +284,7 @@ export default function TravelLogisticsPage() {
           <div className="text-center mb-16">
             <h2 className="font-brand text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Real-World Applications</h2>
             <p className="font-body text-xl text-gray-600 max-w-3xl mx-auto">
-              See how organizations use Packets to streamline their travel and logistics operations.
+              See how organizations use packets to streamline their travel and logistics operations.
             </p>
           </div>
           <div className="grid lg:grid-cols-2 gap-12">
@@ -311,7 +311,7 @@ export default function TravelLogisticsPage() {
                   <div>
                     <h4 className="font-body font-semibold text-gray-900 mb-2">Solution</h4>
                     <p className="font-body text-gray-600 text-sm">
-                      Implemented Packets' auto form completion and smart checklists. Forms now auto-populate from HR
+                      Implemented packets' auto form completion and smart checklists. Forms now auto-populate from HR
                       data, documents are verified instantly, and country-specific requirements are validated
                       automatically.
                     </p>
@@ -353,7 +353,7 @@ export default function TravelLogisticsPage() {
                   <div>
                     <h4 className="font-body font-semibold text-gray-900 mb-2">Solution</h4>
                     <p className="font-body text-gray-600 text-sm">
-                      Deployed Packets for automated customs form generation and compliance validation. Smart checklists
+                      Deployed packets for automated customs form generation and compliance validation. Smart checklists
                       ensure all required documents are collected and verified before shipment.
                     </p>
                   </div>

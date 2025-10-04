@@ -61,7 +61,7 @@ export default function EarlyAccessForm() {
   return (
     <Card className="w-full max-w-2xl mx-auto mb-5">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold text-center">Get Early Access to Packets</CardTitle>
+        <CardTitle className="text-2xl font-bold text-center">Get Early Access to packets</CardTitle>
         <CardDescription className="text-center">
           Join the waitlist to be among the first to experience intelligent compliance workflows
         </CardDescription>
@@ -131,7 +131,7 @@ export default function EarlyAccessForm() {
 
 
           <div className="space-y-2 hidden">
-            <Label htmlFor="primaryTask">What tasks would you like Packets to handle? *</Label>
+            <Label htmlFor="primaryTask">What tasks would you like packets to handle? *</Label>
             <Select name = "primaryTask" onValueChange={(value) => handleSelectChange("primaryTask", value)} required>
               <SelectTrigger>
                 <SelectValue placeholder="Select your primary use case" />

@@ -22,7 +22,7 @@ const faqs = [
   {
     question: "Can we integrate with our existing systems?",
     answer:
-      "Yes, Packets offers extensive API access and can integrate with most enterprise systems including CRM, ERP, HRIS, and document management platforms. Custom integrations are available as part of enterprise plans.",
+      "Yes, packets offers extensive API access and can integrate with most enterprise systems including CRM, ERP, HRIS, and document management platforms. Custom integrations are available as part of enterprise plans.",
   },
   {
     question: "What security and compliance features are included?",
