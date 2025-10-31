@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, CheckCircle } from "lucide-react"
+import { CheckCircle } from "lucide-react"
 
 const features = [
   {
@@ -13,44 +13,45 @@ const features = [
       "Add logic by team, region, or framework",
       "Reuse workflows across products and geographies",
     ],
-    image: "/images/ai-assistance.png?text=Workflow+Builder+Interface",
+    image: "/images/ai-workflows.jpg?text=Workflow+Builder+Interface",
     darkBgColor: "bg-gradient-to-br from-blue-900/20 to-purple-900/20",
   },
   {
-    title: "AI Assistance",
+    title: "AI-Powered Compliance Assistant",
     description:
-      "Context‑aware guidance explains the “why” behind each control.",
+      "Your built-in compliance expert that explains the intent behind every control and helps you close gaps faster.",
     details: [
-      "Gap analysis with prioritized next steps", 
-      "Policy drafts and control narratives", 
-      "Real‑time validation and drift detection",
-      "Learns from usage to improve over time",
+      "AI Gap analysis with prioritized next steps", 
+      "Generate Policy drafts and control narratives", 
+      "Detect control drift and non-compliance in real time",
+      "Learns from your audit history to give better suggestions",
     ],
-    image: "/images/ai-assistance.png?text=AI+Chat+Interface",
+    image: "/images/ai-assistance.jpg?text=AI+Chat+Interface",
     darkBgColor: "bg-gradient-to-br from-green-900/20 to-teal-900/20",
   },
   {
-    title: "Tracking and Reminders",
+    title: "Continuous Monitoring & Trust Portal",
     description:
-      "See status by framework, team, and control.",
+      "See status by each steps, control, and framework with full audit trails.",
     details: [
-      "Live dashboards and SLA tracking",
+      "LInteractive dashboards with status and evidence links",
       "Automated reminders and escalations",
-      "Full action logs and exportable reports"
+      "Full action logs and exportable reports",
+      "Automated vendor risk scoring, policy updates and threat monitoring",      
     ],
-    image: "/images/ai-assistance.png?text=Dashboard+Timeline+View",
+    image: "/images/tracking.jpg?text=Dashboard+Timeline+View",
     darkBgColor: "bg-gradient-to-br from-orange-900/20 to-red-900/20",
   },
   {
-    title: "Real-time Validation",
+    title: "Smart Validation Engine",
     description:
-      "Ensure completeness, format compliance, and evidence accuracy.",
+      "AI checks every submission for completeness, accuracy, and format compliance before you hit ‘submit’.",
     details: [
-      "Instantly flag inconsistencies and missing artifacts",
+      "Instantly flag missing evidence or inconsistent data",
       "Validate against framework rules and internal policies",
       "Reduce downstream rework by catching issues early"
     ],
-    image: "/images/form-validations.jpg?text=Smart+Form+Interface",
+    image: "/images/validations.jpg?text=Smart+Form+Interface",
     darkBgColor: "bg-gradient-to-br from-teal-900/20 to-red-900/20",
   },
 ]
