@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | packets",
   },
   description:
-    "End-to-end document automation platform. Docs that move themselves—from creation to approval, stamping to delivery. Faster turnaround, fewer errors, fully auditable.",
+    "packets helps fast-growing companies achieve ISO 27001, SOC 2, GDPR, EU AI Act, and more—faster and audit-ready. Automate GRC workflows, simplify evidence collection, and stay continuously compliant.",
   keywords: [
     "compliance consultancy",
     "audit partners",
