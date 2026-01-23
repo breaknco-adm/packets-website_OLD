@@ -113,7 +113,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3">
               <Image src="/packets-logo.png" alt="packets Logo" width={40} height={60} className="w-10 h-10" />
-              <span className="font-hero font-medium text-3xl text-black">packets</span>
+              <span className="font-display text-2xl text-primary bg-clip-text">packets</span>
             </Link>
           </div>
 
